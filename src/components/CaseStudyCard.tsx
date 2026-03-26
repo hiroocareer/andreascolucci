@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 interface CaseStudyCardProps {
   number: string;
@@ -7,48 +9,107 @@ interface CaseStudyCardProps {
   details: string[];
   role: string;
   outcome: string;
+  image: string;
   index: number;
 }
 
-const CaseStudyCard = ({ number, title, context, details, role, outcome, index }: CaseStudyCardProps) => {
+const CaseStudyCard = ({ number, title, context, details, role, outcome, image, index }: CaseStudyCardProps) => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const isReversed = index % 2 !== 0;
+
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      viewport={{ once: true }}
-      className="border-t border-border py-14 md:py-20 group"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-        <div className="md:col-span-1">
-          <span className="text-sm text-muted-foreground font-medium">{number}</span>
-        </div>
+    <>
+      <motion.article
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="py-16 md:py-24 border-t border-border"
+      >
+        {/* Hero image */}
+        <motion.div
+          className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12 md:mb-16 cursor-pointer group"
+          onClick={() => setLightboxOpen(true)}
+          whileHover={{ scale: 1.005 }}
+          transition={{ duration: 0.4 }}
+        >
+          <img
+            src={image}
+            alt={`${title} — event operations`}
+            loading="lazy"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-colors duration-500" />
+          <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-foreground/30 to-transparent" />
+          <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
+            <span className="text-background text-xs font-medium uppercase tracking-[0.2em] opacity-80">
+              {number}
+            </span>
+          </div>
+        </motion.div>
 
-        <div className="md:col-span-4">
-          <h3 className="heading-display text-2xl md:text-3xl mb-3 group-hover:text-muted-foreground transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-sm text-foreground font-medium mb-4 leading-relaxed italic">
-            {context}
-          </p>
-          <ul className="space-y-1">
-            {details.map((detail, i) => (
-              <li key={i} className="text-sm text-muted-foreground">{detail}</li>
-            ))}
-          </ul>
-        </div>
+        {/* Content */}
+        <div className={`grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 ${isReversed ? 'md:direction-rtl' : ''}`}>
+          <div className={`${isReversed ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5'}`} style={{ direction: 'ltr' }}>
+            <h3 className="heading-display text-2xl md:text-4xl mb-3 tracking-tight">
+              {title}
+            </h3>
+            <p className="text-base text-foreground font-medium mb-6 leading-relaxed italic">
+              {context}
+            </p>
+            <ul className="space-y-1.5">
+              {details.map((detail, i) => (
+                <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="w-1 h-1 bg-muted-foreground rounded-full mt-1.5 shrink-0" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="md:col-span-3">
-          <span className="label-text block mb-2">Role</span>
-          <p className="text-sm text-foreground leading-relaxed">{role}</p>
+          <div className={`${isReversed ? 'md:col-start-1 md:col-span-5 md:row-start-1' : 'md:col-start-7 md:col-span-6'} space-y-8`} style={{ direction: 'ltr' }}>
+            <div>
+              <span className="label-text block mb-2">Role</span>
+              <p className="text-sm text-foreground leading-relaxed">{role}</p>
+            </div>
+            <div>
+              <span className="label-text block mb-2">Outcome</span>
+              <p className="text-sm text-foreground leading-relaxed">{outcome}</p>
+            </div>
+          </div>
         </div>
+      </motion.article>
 
-        <div className="md:col-span-4">
-          <span className="label-text block mb-2">Outcome</span>
-          <p className="text-sm text-foreground leading-relaxed">{outcome}</p>
-        </div>
-      </div>
-    </motion.article>
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] bg-foreground/95 flex items-center justify-center p-4 md:p-8 cursor-pointer"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <button
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-6 right-6 text-background hover:text-background/70 transition-colors z-10"
+            aria-label="Close lightbox"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <motion.img
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            src={image}
+            alt={`${title} — full view`}
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </motion.div>
+      )}
+    </>
   );
 };
 

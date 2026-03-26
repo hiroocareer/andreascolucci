@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
 
+import caseMonegros from "@/assets/case-monegros.jpg";
+import caseCampovolo from "@/assets/case-campovolo.jpg";
+import caseElrow from "@/assets/case-elrow.jpg";
+import caseDimensions from "@/assets/case-dimensions.jpg";
+import caseMotogp from "@/assets/case-motogp.jpg";
+import caseOlimpico from "@/assets/case-olimpico.jpg";
+import caseSonar from "@/assets/case-sonar.jpg";
+
 const caseStudies = [
   {
     number: "01",
@@ -11,6 +19,7 @@ const caseStudies = [
     details: ["70,000 attendees", "22-hour continuous event", "Distributed logistics across desert terrain"],
     role: "End-to-end operational coordination across distributed stages, services, and vendor systems. Full control over logistics in an environment where infrastructure is temporary and conditions are extreme.",
     outcome: "Operations remained stable throughout the full 22-hour cycle with no critical disruptions. Coordination held under extreme environmental and logistical pressure.",
+    image: caseMonegros,
   },
   {
     number: "02",
@@ -19,6 +28,7 @@ const caseStudies = [
     details: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
     role: "Operational systems oversight — payment systems, access control, and crowd flow management at maximum capacity.",
     outcome: "Seamless execution at full capacity. All systems performed without interruption across the entire event cycle. No operational failures recorded.",
+    image: caseCampovolo,
   },
   {
     number: "03",
@@ -27,6 +37,7 @@ const caseStudies = [
     details: ["33,000 attendees per day", "2 consecutive days", "High-density festival environment"],
     role: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control under sustained pressure.",
     outcome: "Controlled, stable environment maintained across both days despite extreme density conditions. No escalations or critical incidents.",
+    image: caseElrow,
   },
   {
     number: "04",
@@ -35,6 +46,7 @@ const caseStudies = [
     details: ["Multi-day event (14 days)", "Complex multi-venue setup", "8,000 attendees per day"],
     role: "Multi-venue operational management. Systems integration, scheduling, and cross-venue coordination over an extended festival period.",
     outcome: "Sustained operational stability over 14 consecutive days across multiple venues. Consistent service delivery with no systemic failures.",
+    image: caseDimensions,
   },
   {
     number: "05",
@@ -43,6 +55,7 @@ const caseStudies = [
     details: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
     role: "Operational management of hospitality and food & beverage areas. Payment system deployment and vendor coordination under premium service expectations.",
     outcome: "Premium service standards maintained under high-volume conditions. Payment and service flow operated without interruption.",
+    image: caseMotogp,
   },
   {
     number: "06",
@@ -51,6 +64,7 @@ const caseStudies = [
     details: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
     role: "Implementation and management of cashless payment systems integrated with F&B vendor operations. Built a repeatable operational framework for match days.",
     outcome: "Reliable, consistent operational framework delivering stable results across the full season. Systems held under recurring high-pressure conditions.",
+    image: caseOlimpico,
   },
   {
     number: "07",
@@ -59,6 +73,7 @@ const caseStudies = [
     details: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
     role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
     outcome: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance. No operational disruptions despite scale and complexity.",
+    image: caseSonar,
   },
 ];
 
