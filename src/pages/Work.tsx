@@ -1,27 +1,55 @@
 import { motion } from "framer-motion";
-import ProjectCard from "@/components/ProjectCard";
+import CaseStudyCard from "@/components/CaseStudyCard";
 
-const projects = [
+const caseStudies = [
   {
     number: "01",
-    title: "Analytics Dashboard Rebrand",
-    context: "B2B SaaS with complex data visualization",
-    action: "Rewrote the entire dashboard copy for clarity and action",
-    result: "+42% user activation",
+    title: "Monegros Desert Festival",
+    details: ["70,000 attendees", "22-hour continuous event", "High complexity, distributed logistics"],
+    role: "End-to-end operational coordination across distributed stages, services, and vendor systems in a remote desert environment.",
+    outcome: "Full operational continuity across 22 hours with zero critical failures.",
   },
   {
     number: "02",
-    title: "Fintech App Launch",
-    context: "Mobile banking app entering Australian market",
-    action: "Created brand voice, onboarding flows, and in-app copy",
-    result: "3x more signups",
+    title: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+    details: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
+    role: "Operational systems oversight. Payment systems, access control, and crowd flow management.",
+    outcome: "Seamless execution at maximum capacity. All systems performed without interruption.",
   },
   {
     number: "03",
-    title: "Email Lifecycle Overhaul",
-    context: "E-commerce brand with high churn",
-    action: "Strategic 12-email sequence with behavioral triggers",
-    result: "-28% churn rate",
+    title: "elrow Town Madrid",
+    details: ["33,000 attendees per day", "2 consecutive days", "High-density environment"],
+    role: "Onsite operations lead. Real-time decision-making, vendor coordination, and crowd flow control.",
+    outcome: "Controlled, stable environment maintained across both days despite extreme density.",
+  },
+  {
+    number: "04",
+    title: "Dimensions & Outlook Festival — Pula, Croatia",
+    details: ["Multi-day event (14 days)", "Complex multi-venue setup", "8,000 attendees per day"],
+    role: "Multi-venue operational management. Systems integration, scheduling, and cross-venue coordination.",
+    outcome: "Sustained operational stability over 14 consecutive days across multiple venues.",
+  },
+  {
+    number: "05",
+    title: "MotoGP Catalunya — Hospitality & F&B Area",
+    details: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
+    role: "Operational management of hospitality and food & beverage areas. Payment system deployment.",
+    outcome: "Premium service standards maintained under high-volume conditions.",
+  },
+  {
+    number: "06",
+    title: "Stadio Olimpico — Football Season",
+    details: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
+    role: "Implementation and management of cashless payment systems integrated with F&B vendor operations.",
+    outcome: "Reliable, repeatable operational framework across multiple match days.",
+  },
+  {
+    number: "07",
+    title: "Sónar Festival Barcelona",
+    details: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
+    role: "Operational coordination across multiple venues and near-continuous scheduling.",
+    outcome: "Uninterrupted operations across four days. All critical systems maintained full performance.",
   },
 ];
 
@@ -29,44 +57,26 @@ const Work = () => {
   return (
     <main className="min-h-screen bg-background pt-32 pb-20 px-4 md:px-6">
       <div className="container mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h1 className="heading-display text-[clamp(3rem,10vw,10rem)] leading-[0.85] mb-8">
-            Work
+          <h1 className="heading-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] mb-8">
+            Selected Work
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Selected projects where strategy met execution. 
-            Real results, real impact.
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Large-scale events where operational control was critical. 
+            No fake metrics — just reliability, execution, and results.
           </p>
         </motion.div>
 
-        {/* Projects */}
         <div>
-          {projects.map((project, index) => (
-            <ProjectCard key={project.number} {...project} index={index} />
+          {caseStudies.map((study, index) => (
+            <CaseStudyCard key={study.number} {...study} index={index} />
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-border pt-20 mt-20 text-center"
-        >
-          <p className="text-2xl text-muted-foreground mb-4">
-            Like what you see?
-          </p>
-          <p className="heading-display text-4xl md:text-5xl">
-            Let's create <span className="text-primary">your</span> case study.
-          </p>
-        </motion.div>
       </div>
     </main>
   );

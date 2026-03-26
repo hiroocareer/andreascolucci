@@ -8,7 +8,6 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
-  { href: "/styleguide", label: "Styleguide" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -20,27 +19,27 @@ const Navigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 md:px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-4 md:px-6 py-5">
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="heading-display text-xl hover:text-primary transition-colors"
+            className="text-sm font-medium uppercase tracking-[0.2em] text-foreground hover:text-muted-foreground transition-colors"
             onClick={closeMenu}
           >
-            LIAM FLETCHER
+            Event Operations
           </Link>
           
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   to={item.href}
                   className={cn(
-                    "text-sm font-medium uppercase tracking-wider transition-colors story-link",
+                    "text-xs font-medium uppercase tracking-[0.15em] transition-colors story-link",
                     location.pathname === item.href
-                      ? "text-primary"
+                      ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
@@ -53,10 +52,10 @@ const Navigation = () => {
           {/* Mobile Hamburger Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-muted-foreground transition-colors"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -71,7 +70,7 @@ const Navigation = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-background border-b border-border overflow-hidden"
           >
-            <ul className="container mx-auto px-4 py-6 space-y-4">
+            <ul className="container mx-auto px-4 py-8 space-y-6">
               {navItems.map((item, index) => (
                 <motion.li 
                   key={item.href}
@@ -83,10 +82,10 @@ const Navigation = () => {
                     to={item.href}
                     onClick={closeMenu}
                     className={cn(
-                      "block text-2xl font-medium uppercase tracking-wider transition-colors py-2",
+                      "block text-2xl tracking-tight transition-colors py-1",
                       location.pathname === item.href
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
                     )}
                   >
                     {item.label}
