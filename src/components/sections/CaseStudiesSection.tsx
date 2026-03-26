@@ -65,6 +65,7 @@ const caseStudies = [
   {
     number: "06",
     title: "Stadio Olimpico — Football Season",
+    highlight: "Full season — recurring operations",
     context: "Recurring high-volume operations across an entire football season.",
     details: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
     role: "Implementation and management of cashless payment systems integrated with F&B vendor operations. Built a repeatable operational framework for match days.",
