@@ -75,6 +75,7 @@ const caseStudies = [
   {
     number: "07",
     title: "Sónar Festival Barcelona",
+    highlight: "4 days — multi-venue — near 24h — 160,000 total",
     context: "Four days of near-continuous operations across multiple venues with 160,000 total attendees.",
     details: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
     role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
