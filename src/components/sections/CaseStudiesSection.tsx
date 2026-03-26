@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
 
 const caseStudies = [
@@ -80,6 +82,25 @@ const CaseStudiesSection = () => {
             <CaseStudyCard key={study.number} {...study} index={index} />
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 pt-10 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
+        >
+          <p className="text-base md:text-lg text-foreground">
+            Working on something similar? Let's talk.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] bg-foreground text-background px-8 py-4 hover:bg-foreground/90 transition-colors self-start"
+          >
+            Start a conversation
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

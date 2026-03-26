@@ -12,7 +12,7 @@ const AboutSection = () => {
           className="mb-20"
         >
           <span className="label-text block mb-4">About</span>
-          <h2 className="heading-display text-3xl md:text-5xl">Background</h2>
+          <h2 className="heading-display text-3xl md:text-5xl">Andreas Colucci</h2>
         </motion.div>
 
         <motion.div

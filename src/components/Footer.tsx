@@ -51,10 +51,10 @@ const Footer = () => {
               <span className="label-text block mb-6">Contact</span>
               <div className="space-y-3">
                 <a 
-                  href="mailto:info@eventoperations.com" 
+                  href="mailto:andreas.colucci@icloud.com" 
                   className="text-foreground hover:text-muted-foreground transition-colors text-base story-link inline-block"
                 >
-                  info@eventoperations.com
+                  andreas.colucci@icloud.com
                 </a>
               </div>
             </motion.div>
@@ -101,7 +101,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="mt-20 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground tracking-wider">
-              © {currentYear} All rights reserved.
+              © {currentYear} Andreas Colucci. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground tracking-wider">
               Senior Event Operations
