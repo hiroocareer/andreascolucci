@@ -53,6 +53,7 @@ const caseStudies = [
   {
     number: "05",
     title: "MotoGP Catalunya — Hospitality & F&B Area",
+    highlight: "High-volume F&B — premium hospitality",
     context: "Premium hospitality operations under high-volume conditions.",
     details: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
     role: "Operational management of hospitality and food & beverage areas. Payment system deployment.",
