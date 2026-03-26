@@ -45,6 +45,7 @@ const caseStudies = [
   {
     number: "04",
     title: "Dimensions & Outlook Festival — Pula, Croatia",
+    highlight: "14 days — multi-venue — 8,000/day",
     context: "A 14-day multi-venue operation requiring sustained coordination over an extended period.",
     details: ["Multi-day event (14 days)", "Complex multi-venue setup", "8,000 attendees per day"],
     role: "Multi-venue operational management. Systems integration, scheduling, and cross-venue coordination over an extended festival period.",
