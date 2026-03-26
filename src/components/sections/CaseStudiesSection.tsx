@@ -15,6 +15,7 @@ const caseStudies = [
   {
     number: "01",
     title: "Monegros Desert Festival",
+    highlight: "70,000 attendees — 22 hours",
     context: "A 22-hour continuous event in a remote, high-complexity environment.",
     details: ["70,000 attendees", "22-hour continuous event", "Distributed logistics across desert terrain"],
     role: "End-to-end operational coordination across distributed stages, services, and vendor systems. Full control over logistics in an environment where infrastructure is temporary and conditions are extreme.",
