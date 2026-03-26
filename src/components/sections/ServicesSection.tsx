@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -19,7 +21,7 @@ const services = [
       "Access control and crowd flow",
       "Vendor and F&B operations",
     ],
-    closing: "Focus on systems that must work in real time under pressure.",
+    closing: "I work on systems that must perform in real time under pressure.",
   },
 ];
 
@@ -61,7 +63,7 @@ const ServicesSection = () => {
                   <ul className="space-y-2 mb-6">
                     {service.items!.map((item) => (
                       <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                        <span className="text-foreground mt-1.5 w-1 h-1 bg-foreground rounded-full shrink-0" />
+                        <span className="w-1 h-1 bg-foreground rounded-full mt-1.5 shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -74,6 +76,25 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-20 pt-10 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
+        >
+          <p className="text-base text-muted-foreground">
+            If you're dealing with operational complexity, feel free to reach out.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] bg-foreground text-background px-8 py-4 hover:bg-foreground/90 transition-colors self-start"
+          >
+            Let's talk
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

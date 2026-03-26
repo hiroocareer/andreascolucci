@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const engagements = [
-  "Large-scale events",
-  "High-complexity operations",
-  "Situations where execution is critical",
+  "Scale is high",
+  "Operations are critical",
+  "Execution cannot fail",
 ];
 
 const WorkWithMeSection = () => {
@@ -31,7 +31,7 @@ const WorkWithMeSection = () => {
             className="flex flex-col justify-center"
           >
             <p className="text-base md:text-lg text-foreground mb-8 leading-relaxed">
-              I typically get involved in:
+              I typically get involved in projects where:
             </p>
             <ul className="space-y-4 mb-10">
               {engagements.map((item) => (
@@ -42,13 +42,13 @@ const WorkWithMeSection = () => {
               ))}
             </ul>
             <p className="text-base md:text-lg text-foreground mb-10 leading-relaxed">
-              If you're working on something complex, let's talk.
+              If you're facing a complex setup or want a second opinion on your operations, feel free to reach out.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] bg-foreground text-background px-8 py-4 hover:bg-foreground/90 transition-colors self-start"
             >
-              Get in touch
+              Start a conversation
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

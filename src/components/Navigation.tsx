@@ -24,10 +24,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="text-sm font-medium uppercase tracking-[0.2em] text-foreground hover:text-muted-foreground transition-colors"
+            className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors"
             onClick={closeMenu}
           >
-            Event Operations
+            Andreas Colucci
           </Link>
           
           {/* Desktop Navigation */}

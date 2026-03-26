@@ -10,9 +10,9 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-6"
         >
-          <span className="label-text block">Andreas Colucci</span>
+          <span className="heading-display text-xl md:text-2xl text-muted-foreground">Andreas Colucci</span>
         </motion.div>
 
         <motion.div
@@ -32,16 +32,25 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-xl mt-10 mb-20 leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground max-w-xl mt-10 mb-6 leading-relaxed"
         >
           Large-scale events. Real-time execution. Critical problem solving.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-base md:text-lg text-foreground max-w-xl mb-16 leading-relaxed"
+        >
+          If you're working on a complex event, let's talk.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12"
         >
           <Link
             to="/contact"
@@ -56,6 +65,23 @@ const HeroSection = () => {
           >
             Download CV
             <Download className="w-4 h-4" />
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8"
+        >
+          <p className="text-sm text-muted-foreground">
+            Available for selected projects — currently open to new conversations.
+          </p>
+          <a
+            href="mailto:andreas.colucci@icloud.com"
+            className="text-sm text-foreground hover:text-muted-foreground transition-colors story-link"
+          >
+            andreas.colucci@icloud.com
           </a>
         </motion.div>
       </div>
