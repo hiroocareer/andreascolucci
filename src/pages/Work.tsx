@@ -23,6 +23,7 @@ const caseStudies = [
   {
     number: "02",
     title: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+    highlight: "110,000 attendees",
     context: "One of the largest concerts in Italy, with zero margin for error.",
     details: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
     role: "Operational systems oversight. Payment systems, access control, and crowd flow management.",
