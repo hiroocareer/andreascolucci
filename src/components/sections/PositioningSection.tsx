@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const PositioningSection = () => {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-6 border-t border-border">
+    <section className="py-28 md:py-36 px-4 md:px-6 border-t border-border">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ const PositioningSection = () => {
             Events run smoothly until something breaks.
           </p>
           <p className="heading-display text-3xl md:text-5xl leading-[1.15] text-muted-foreground mt-4">
-            That's where I come in.
+            That's when I step in.
           </p>
         </motion.div>
       </div>

@@ -5,64 +5,71 @@ const caseStudies = [
   {
     number: "01",
     title: "Monegros Desert Festival",
-    details: ["70,000 attendees", "22-hour continuous event", "High complexity, distributed logistics"],
-    role: "End-to-end operational coordination across distributed stages, services, and vendor systems in a remote desert environment.",
-    outcome: "Full operational continuity across 22 hours with zero critical failures. Stable coordination under extreme environmental and logistical pressure.",
+    context: "A 22-hour continuous event in a remote, high-complexity environment.",
+    details: ["70,000 attendees", "22-hour continuous event", "Distributed logistics across desert terrain"],
+    role: "End-to-end operational coordination across distributed stages, services, and vendor systems. Full control over logistics in an environment where infrastructure is temporary and conditions are extreme.",
+    outcome: "Operations remained stable throughout the full 22-hour cycle with no critical disruptions. Coordination held under extreme environmental and logistical pressure.",
   },
   {
     number: "02",
     title: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+    context: "One of the largest concerts in Italy, with zero margin for error.",
     details: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
-    role: "Operational systems oversight for one of Italy's largest single-artist concerts. Payment systems, access control, and crowd flow management.",
-    outcome: "Seamless execution at maximum capacity. All systems performed without interruption across the full event cycle.",
+    role: "Operational systems oversight — payment systems, access control, and crowd flow management at maximum capacity.",
+    outcome: "Seamless execution at full capacity. All systems performed without interruption across the entire event cycle. No operational failures recorded.",
   },
   {
     number: "03",
     title: "elrow Town Madrid",
+    context: "Two consecutive days of high-density operations with 33,000 attendees per day.",
     details: ["33,000 attendees per day", "2 consecutive days", "High-density festival environment"],
-    role: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control.",
-    outcome: "Controlled, stable environment maintained across both days despite extreme density conditions.",
+    role: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control under sustained pressure.",
+    outcome: "Controlled, stable environment maintained across both days despite extreme density conditions. No escalations or critical incidents.",
   },
   {
     number: "04",
     title: "Dimensions & Outlook Festival — Pula, Croatia",
+    context: "A 14-day multi-venue operation requiring sustained coordination over an extended period.",
     details: ["Multi-day event (14 days)", "Complex multi-venue setup", "8,000 attendees per day"],
-    role: "Multi-venue operational management across an extended festival period. Systems integration, scheduling, and cross-venue coordination.",
-    outcome: "Sustained operational stability over 14 consecutive days across multiple venues with consistent service delivery.",
+    role: "Multi-venue operational management. Systems integration, scheduling, and cross-venue coordination over an extended festival period.",
+    outcome: "Sustained operational stability over 14 consecutive days across multiple venues. Consistent service delivery with no systemic failures.",
   },
   {
     number: "05",
     title: "MotoGP Catalunya — Hospitality & F&B Area",
+    context: "Premium hospitality operations under high-volume conditions at the Montmeló circuit.",
     details: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
-    role: "Operational management of hospitality and food & beverage areas. Payment system deployment and vendor coordination.",
-    outcome: "Premium service standards maintained under high-volume conditions. Efficient payment and service flow throughout the event.",
+    role: "Operational management of hospitality and food & beverage areas. Payment system deployment and vendor coordination under premium service expectations.",
+    outcome: "Premium service standards maintained under high-volume conditions. Payment and service flow operated without interruption.",
   },
   {
     number: "06",
     title: "Stadio Olimpico — Football Season",
+    context: "Recurring high-volume operations across an entire football season.",
     details: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
-    role: "Implementation and management of cashless payment systems integrated with F&B vendor operations across the football season.",
-    outcome: "Reliable, repeatable operational framework delivering consistent results across multiple match days.",
+    role: "Implementation and management of cashless payment systems integrated with F&B vendor operations. Built a repeatable operational framework for match days.",
+    outcome: "Reliable, consistent operational framework delivering stable results across the full season. Systems held under recurring high-pressure conditions.",
   },
   {
     number: "07",
     title: "Sónar Festival Barcelona",
+    context: "Four days of near-continuous operations across multiple venues with 160,000 total attendees.",
     details: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
-    role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution.",
-    outcome: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance throughout.",
+    role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
+    outcome: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance. No operational disruptions despite scale and complexity.",
   },
 ];
 
 const CaseStudiesSection = () => {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-6 border-t border-border">
+    <section className="py-28 md:py-36 px-4 md:px-6 border-t border-border">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-20"
         >
           <span className="label-text block mb-4">Selected work</span>
           <h2 className="heading-display text-3xl md:text-5xl">Case Studies</h2>
