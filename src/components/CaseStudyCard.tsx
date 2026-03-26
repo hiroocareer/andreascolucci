@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 interface CaseStudyCardProps {
   number: string;
   title: string;
+  highlight: string;
   context: string;
   details: string[];
   role: string;
@@ -13,7 +14,7 @@ interface CaseStudyCardProps {
   index: number;
 }
 
-const CaseStudyCard = ({ number, title, context, details, role, outcome, image, index }: CaseStudyCardProps) => {
+const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index }: CaseStudyCardProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const isReversed = index % 2 !== 0;
 
@@ -53,9 +54,12 @@ const CaseStudyCard = ({ number, title, context, details, role, outcome, image, 
         {/* Content */}
         <div className={`grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 ${isReversed ? 'md:direction-rtl' : ''}`}>
           <div className={`${isReversed ? 'md:col-start-7 md:col-span-6' : 'md:col-span-5'}`} style={{ direction: 'ltr' }}>
-            <h3 className="heading-display text-2xl md:text-4xl mb-3 tracking-tight">
+            <h3 className="heading-display text-2xl md:text-4xl mb-4 tracking-tight">
               {title}
             </h3>
+            <p className="heading-display text-xl md:text-2xl text-muted-foreground mb-6">
+              {highlight}
+            </p>
             <p className="text-base text-foreground font-medium mb-6 leading-relaxed italic">
               {context}
             </p>
