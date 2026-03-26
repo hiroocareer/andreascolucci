@@ -35,6 +35,7 @@ const caseStudies = [
   {
     number: "03",
     title: "elrow Town Madrid",
+    highlight: "33,000 attendees/day — 2 days",
     context: "Two consecutive days of high-density operations with 33,000 attendees per day.",
     details: ["33,000 attendees per day", "2 consecutive days", "High-density festival environment"],
     role: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control under sustained pressure.",
