@@ -67,15 +67,6 @@ const GlobalExperienceSection = () => {
           </ul>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-sm md:text-base text-muted-foreground max-w-2xl"
-        >
-          Repeated exposure to high-pressure environments, across different countries and operational systems.
-        </motion.p>
       </div>
     </section>
   );
