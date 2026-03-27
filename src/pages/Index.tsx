@@ -3,6 +3,7 @@ import ImpactSection from "@/components/sections/ImpactSection";
 import PositioningSection from "@/components/sections/PositioningSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
+import GlobalExperienceSection from "@/components/sections/GlobalExperienceSection";
 import WhenInvolvedSection from "@/components/sections/WhenInvolvedSection";
 import AboutSection from "@/components/sections/AboutSection";
 import AvailabilitySection from "@/components/sections/AvailabilitySection";
