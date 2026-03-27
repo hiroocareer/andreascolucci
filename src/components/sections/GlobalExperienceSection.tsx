@@ -1,31 +1,13 @@
 import { motion } from "framer-motion";
 
-const categories = [
-  {
-    title: "Major Festivals & Productions",
-    events: [
-      "Kappa Futur Festival (10 editions)",
-      "Ultra Music Festival Miami",
-      "Ultra Music Festival South Africa",
-      "Snowrow Festival (Andorra)",
-      "Enchanted Valley Carnival (India)",
-    ],
-  },
-  {
-    title: "Large-Scale & International Events",
-    events: [
-      "Formula 1 Abu Dhabi",
-      "Dubai Rugby 7s — 50th Anniversary",
-      "Atlas Golden Fest (Panama)",
-    ],
-  },
-  {
-    title: "Event Series & Shows",
-    events: [
-      "elrow shows (Malaga, A Coruña, Netherlands, and others)",
-      "Storytellers @ Papaya Playa Project (Tulum)",
-    ],
-  },
+const selectedEvents = [
+  "Ultra Music Festival (Miami / South Africa)",
+  "Formula 1 Abu Dhabi",
+  "Kappa Futur Festival (10 editions)",
+  "Sónar Barcelona",
+  "elrow (multiple locations)",
+  "Dubai Rugby 7s",
+  "Enchanted Valley Carnival (India)",
 ];
 
 const GlobalExperienceSection = () => {
@@ -51,39 +33,46 @@ const GlobalExperienceSection = () => {
           className="mb-20 max-w-3xl"
         >
           <p className="text-2xl md:text-4xl font-light leading-snug tracking-tight text-foreground mb-6">
-            Over 300 events managed across 20+ countries in 10 years of experience.
+            300+ events across 20+ countries.
+            <br />
+            10 years operating in high-complexity environments.
           </p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            From large-scale festivals to international productions, working across different operational environments, teams, and systems.
+            From global festivals to international productions, operating across different teams, systems, and cultural contexts.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="border-t border-border pt-8"
-            >
-              <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-8">
-                {category.title}
-              </h3>
-              <ul className="space-y-4">
-                {category.events.map((event) => (
-                  <li
-                    key={event}
-                    className="text-base md:text-lg text-foreground font-light leading-relaxed"
-                  >
-                    {event}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="border-t border-border pt-8 mb-16"
+        >
+          <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-8">
+            Selected Events
+          </h3>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
+            {selectedEvents.map((event) => (
+              <li
+                key={event}
+                className="text-base md:text-lg text-foreground font-light leading-relaxed"
+              >
+                {event}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-sm md:text-base text-muted-foreground max-w-2xl"
+        >
+          Repeated exposure to high-pressure environments, across different countries and operational systems.
+        </motion.p>
       </div>
     </section>
   );
