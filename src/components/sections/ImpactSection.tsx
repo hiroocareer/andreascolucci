@@ -41,6 +41,20 @@ const ImpactSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-20 pt-10 border-t border-border max-w-3xl"
+        >
+          <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground">
+            Most operational failures are predictable.
+            <br />
+            <span className="text-muted-foreground">The problem is they're usually noticed too late.</span>
+          </p>
+        </motion.div>
       </div>
     </section>
   );

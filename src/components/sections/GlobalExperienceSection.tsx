@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 import WorldMap from "@/components/WorldMap";
 
 const selectedEvents = [
-  "Ultra Music Festival (Miami / South Africa)",
+  "Ultra Music Festival",
   "Formula 1 Abu Dhabi",
   "Kappa Futur Festival (10 editions)",
   "Sónar Barcelona",
   "elrow (multiple locations)",
   "Dubai Rugby 7s",
-  "Enchanted Valley Carnival (India)",
 ];
 
 const GlobalExperienceSection = () => {
@@ -39,7 +38,7 @@ const GlobalExperienceSection = () => {
             10 years operating in high-complexity environments.
           </p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            From global festivals to international productions, operating across different teams, systems, and cultural contexts.
+            Repeated exposure to high-pressure environments across different countries and systems.
           </p>
         </motion.div>
 
@@ -68,15 +67,6 @@ const GlobalExperienceSection = () => {
           </ul>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-sm md:text-base text-muted-foreground max-w-2xl"
-        >
-          Repeated exposure to high-pressure environments, across different countries and operational systems.
-        </motion.p>
       </div>
     </section>
   );
