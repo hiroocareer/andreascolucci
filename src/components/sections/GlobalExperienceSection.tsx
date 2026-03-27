@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 import WorldMap from "@/components/WorldMap";
 
 const selectedEvents = [
-  "Ultra Music Festival (Miami / South Africa)",
+  "Ultra Music Festival",
   "Formula 1 Abu Dhabi",
   "Kappa Futur Festival (10 editions)",
   "Sónar Barcelona",
   "elrow (multiple locations)",
   "Dubai Rugby 7s",
-  "Enchanted Valley Carnival (India)",
 ];
 
 const GlobalExperienceSection = () => {
