@@ -38,7 +38,7 @@ const GlobalExperienceSection = () => {
             10 years operating in high-complexity environments.
           </p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            From global festivals to international productions, operating across different teams, systems, and cultural contexts.
+            Repeated exposure to high-pressure environments across different countries and systems.
           </p>
         </motion.div>
 
