@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import WorldMap from "@/components/WorldMap";
 
 const selectedEvents = [
   "Ultra Music Festival (Miami / South Africa)",
