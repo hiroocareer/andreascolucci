@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import WorldMap from "@/components/WorldMap";
 
 const selectedEvents = [
   "Ultra Music Festival (Miami / South Africa)",
@@ -41,6 +42,9 @@ const GlobalExperienceSection = () => {
             From global festivals to international productions, operating across different teams, systems, and cultural contexts.
           </p>
         </motion.div>
+
+        <WorldMap />
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
