@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "110,000", label: "attendees managed in a single event" },
-  { value: "14", label: "consecutive days of operations" },
+  { value: "95", label: "team members managed" },
   { value: "24h", label: "near-continuous execution cycles" },
-  { value: "7+", label: "large-scale events delivered" },
+  { value: "100+", label: "large-scale events delivered" },
 ];
 
 const ImpactSection = () => {
