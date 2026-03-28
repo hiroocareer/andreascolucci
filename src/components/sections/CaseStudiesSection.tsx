@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
 
-import caseMonegros from "@/assets/case-monegros.jpg";
+import caseMonegros from "@/assets/monegros-new.jpg";
 import caseCampovolo from "@/assets/case-campovolo.jpg";
 import caseElrow from "@/assets/case-elrow.jpg";
 import caseDimensions from "@/assets/case-dimensions.jpg";
