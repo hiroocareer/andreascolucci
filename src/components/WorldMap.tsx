@@ -41,16 +41,18 @@ const WorldMap = memo(() => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
       viewport={{ once: true }}
-      className="w-full"
+      className="w-full overflow-hidden"
+      style={{ maxHeight: "420px" }}
     >
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 120,
-          center: [20, 20],
+          scale: 130,
+          center: [20, 30],
         }}
+        width={800}
+        height={420}
         className="w-full h-auto"
-        style={{ maxHeight: "480px" }}
       >
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
