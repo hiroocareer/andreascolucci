@@ -42,7 +42,7 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
             loading="lazy"
             width={1920}
             height={1080}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className={`w-full h-full ${fitClass} transition-transform duration-700 group-hover:scale-105`}
           />
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-colors duration-500" />
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-foreground/30 to-transparent" />
