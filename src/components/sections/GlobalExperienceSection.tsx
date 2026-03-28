@@ -52,9 +52,7 @@ const GlobalExperienceSection = () => {
           viewport={{ once: true }}
           className="border-t border-border pt-8 mb-16">
           
-          <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-8">NOTABLE EVENTS
-
-          </h3>
+          <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-8">NOTABLE CLIENTS</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
             {selectedEvents.map((event) =>
             <li
