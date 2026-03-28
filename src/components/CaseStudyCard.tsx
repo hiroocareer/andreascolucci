@@ -19,7 +19,6 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const isReversed = index % 2 !== 0;
   const fitClass = imageFit === "contain" ? "object-contain" : "object-cover";
-  const isReversed = index % 2 !== 0;
 
   return (
     <>
