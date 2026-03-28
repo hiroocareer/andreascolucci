@@ -12,6 +12,7 @@ interface CaseStudyCardProps {
   outcome: string;
   image: string;
   index: number;
+  imageFit?: "cover" | "contain";
 }
 
 const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index }: CaseStudyCardProps) => {
