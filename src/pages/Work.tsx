@@ -79,6 +79,7 @@ const caseStudies = [
     role: "Operational coordination across multiple venues and near-continuous scheduling.",
     outcome: "Uninterrupted operations across four days. All critical systems maintained full performance.",
     image: caseSonar,
+    imageFit: "contain" as const,
   },
 ];
 

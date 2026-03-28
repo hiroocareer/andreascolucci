@@ -12,11 +12,13 @@ interface CaseStudyCardProps {
   outcome: string;
   image: string;
   index: number;
+  imageFit?: "cover" | "contain";
 }
 
-const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index }: CaseStudyCardProps) => {
+const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index, imageFit = "cover" }: CaseStudyCardProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const isReversed = index % 2 !== 0;
+  const fitClass = imageFit === "contain" ? "object-contain" : "object-cover";
 
   return (
     <>
@@ -29,7 +31,7 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
       >
         {/* Hero image */}
         <motion.div
-          className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12 md:mb-16 cursor-pointer group"
+        className={`relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12 md:mb-16 cursor-pointer group ${imageFit === "contain" ? "bg-black" : ""}`}
           onClick={() => setLightboxOpen(true)}
           whileHover={{ scale: 1.005 }}
           transition={{ duration: 0.4 }}
@@ -40,7 +42,7 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
             loading="lazy"
             width={1920}
             height={1080}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className={`w-full h-full ${fitClass} transition-transform duration-700 group-hover:scale-105`}
           />
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-colors duration-500" />
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-foreground/30 to-transparent" />
