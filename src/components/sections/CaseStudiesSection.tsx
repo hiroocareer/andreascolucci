@@ -41,6 +41,7 @@ const caseStudies = [
     role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
     outcome: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance. No operational disruptions despite scale and complexity.",
     image: caseSonar,
+    imageFit: "contain" as const,
   },
   {
     number: "04",
