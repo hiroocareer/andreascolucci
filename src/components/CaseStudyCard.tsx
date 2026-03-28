@@ -31,7 +31,7 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
       >
         {/* Hero image */}
         <motion.div
-          className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12 md:mb-16 cursor-pointer group"
+        className={`relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden mb-12 md:mb-16 cursor-pointer group ${imageFit === "contain" ? "bg-black" : ""}`}
           onClick={() => setLightboxOpen(true)}
           whileHover={{ scale: 1.005 }}
           transition={{ duration: 0.4 }}
