@@ -47,11 +47,11 @@ const WorldMap = memo(() => {
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 130,
-          center: [20, 30],
+          scale: 120,
+          center: [20, 25],
         }}
         width={800}
-        height={420}
+        height={480}
         className="w-full h-auto"
       >
         <Geographies geography={GEO_URL}>
