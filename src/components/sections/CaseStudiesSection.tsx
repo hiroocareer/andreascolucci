@@ -5,7 +5,7 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import { useTranslation } from "@/i18n/useTranslation";
 
 import caseMonegros from "@/assets/monegros-new.jpg";
-import caseCampovolo from "@/assets/case-campovolo.jpg";
+import caseCampovolo from "@/assets/events/campovolo.webp";
 import caseElrow from "@/assets/case-elrow.jpg";
 import caseDimensions from "@/assets/case-dimensions.jpg";
 import caseMotogp from "@/assets/case-motogp.jpg";
