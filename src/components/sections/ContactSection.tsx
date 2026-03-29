@@ -17,8 +17,8 @@ const ContactSection = () => {
             <div className="space-y-6">
               <div>
                 <span className="label-text block mb-2">{t(c.email_label)}</span>
-                <a href="mailto:andreas.colucci@icloud.com" className="text-lg md:text-xl text-foreground hover:text-muted-foreground transition-colors story-link font-medium">
-                  andreas.colucci@icloud.com
+                <a href="mailto:hello@andreascolucci.com" className="text-lg md:text-xl text-foreground hover:text-muted-foreground transition-colors story-link font-medium">
+                  hello@andreascolucci.com
                 </a>
               </div>
               <div>

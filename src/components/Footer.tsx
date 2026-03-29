@@ -36,7 +36,7 @@ const Footer = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }} className="md:col-span-4">
               <span className="label-text block mb-6">{t(f.contact)}</span>
               <div className="space-y-3">
-                <a href="mailto:andreas.colucci@icloud.com" className="text-foreground hover:text-muted-foreground transition-colors text-base story-link inline-block">andreas.colucci@icloud.com</a>
+                <a href="mailto:hello@andreascolucci.com" className="text-foreground hover:text-muted-foreground transition-colors text-base story-link inline-block">hello@andreascolucci.com</a>
               </div>
             </motion.div>
 
