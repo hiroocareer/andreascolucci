@@ -18,7 +18,7 @@ const logos = [
   { src: logoKappaFutur, alt: "Kappa Futur Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
   { src: logoMotogp, alt: "MotoGP", className: "brightness-0 opacity-60 hover:opacity-100" },
   { src: logoCampovolo, alt: "Campovolo", className: "brightness-0 opacity-60 hover:opacity-100" },
-  { src: logoMonegros, alt: "Monegros Desert Festival", className: "opacity-70 hover:opacity-100 mix-blend-multiply" },
+  { src: logoMonegros, alt: "Monegros Desert Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
 ];
 
 const LogoStripSection = () => {
