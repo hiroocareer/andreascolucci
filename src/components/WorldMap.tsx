@@ -59,7 +59,10 @@ const WorldMap = memo(() => {
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies.map((geo) => {
-              const isHighlighted = HIGHLIGHTED_COUNTRIES.has(geo.id);
+              const name = geo.properties?.name;
+              // Exclude French Guiana (part of France in some topologies)
+              const isFrenchGuiana = name === "Fr. S. Antarctic Lands" || name === "French Guiana";
+              const isHighlighted = !isFrenchGuiana && HIGHLIGHTED_COUNTRIES.has(geo.id);
               return (
                 <Geography
                   key={geo.rsmKey}
