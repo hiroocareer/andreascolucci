@@ -32,7 +32,7 @@ const About = () => {
             {principles.map((item, index) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.08 }} viewport={{ once: true }} className="border-t border-border pt-6">
                 <h3 className="text-base md:text-lg font-medium text-foreground mb-2 tracking-tight">{item.title}</h3>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{item.text}</p>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">{item.text}</p>
               </motion.div>
             ))}
           </div>

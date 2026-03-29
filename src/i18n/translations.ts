@@ -637,7 +637,7 @@ export const translations = {
     principles_title: { en: "How I operate", it: "Come opero", es: "Cómo opero" },
     principles: {
       en: [
-        { title: "Execution over theory", text: "Plans are only as good as their execution. I focus on what happens on the ground." },
+        { title: "Execution over theory", text: "Plans are only as good as their execution.\nI focus on what happens on the ground." },
         { title: "Decisions under pressure", text: "When things change — and they always do — I make clear decisions quickly." },
         { title: "Anticipation", text: "The best problem is the one that never happens. I identify risks before they become failures." },
         { title: "Systems that hold", text: "I build operational frameworks designed to perform reliably at scale." },
