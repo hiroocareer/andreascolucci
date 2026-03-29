@@ -50,6 +50,7 @@ const ContactForm = () => {
 
   return (
     <motion.form initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} onSubmit={handleSubmit} className="space-y-6 max-w-xl">
+      <p className="text-base text-muted-foreground">{t(f.intro)}</p>
       <div className="space-y-2">
         <label htmlFor="name" className="label-text">{t(f.name_label)}</label>
         <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg-background border-border text-foreground placeholder:text-muted-foreground h-12 text-base rounded-none" placeholder={t(f.name_placeholder)} />
