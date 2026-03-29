@@ -49,6 +49,7 @@ const App = () => (
           <Route path="/:lang/about" element={<LanguageWrapper><About /></LanguageWrapper>} />
           <Route path="/:lang/contact" element={<LanguageWrapper><Contact /></LanguageWrapper>} />
           
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
