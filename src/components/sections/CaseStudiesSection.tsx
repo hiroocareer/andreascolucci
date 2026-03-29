@@ -6,14 +6,15 @@ import { useTranslation } from "@/i18n/useTranslation";
 
 import caseMonegros from "@/assets/monegros-new.jpg";
 import caseCampovolo from "@/assets/events/campovolo.webp";
+import caseKappaFutur from "@/assets/events/kappa-futur.webp";
 import caseElrow from "@/assets/case-elrow.jpg";
 import caseDimensions from "@/assets/case-dimensions.jpg";
 import caseMotogp from "@/assets/events/motogp.jpg";
 import caseOlimpico from "@/assets/events/olimpico.jpg";
 import caseSonar from "@/assets/sonar-new.png";
 
-const images = [caseCampovolo, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
-const imageFits: (("cover" | "contain") | undefined)[] = [undefined, undefined, "contain", undefined, undefined, undefined];
+const images = [caseCampovolo, caseKappaFutur, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
+const imageFits: (("cover" | "contain") | undefined)[] = [undefined, undefined, undefined, "contain", undefined, undefined, undefined];
 
 const CaseStudiesSection = () => {
   const { t, language, translations } = useTranslation();
