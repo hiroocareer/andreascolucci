@@ -119,6 +119,11 @@ export const translations = {
           it: "Leadership operativa per eventi su larga scala dove affidabilità, coordinamento e controllo non sono negoziabili.",
           es: "Liderazgo operativo para eventos a gran escala donde la fiabilidad, la coordinación y el control no son negociables.",
         },
+        closing: {
+          en: "I take responsibility for operations when reliability is non-negotiable.",
+          it: "Mi assumo la responsabilità delle operazioni quando l'affidabilità non è negoziabile.",
+          es: "Asumo la responsabilidad de las operaciones cuando la fiabilidad no es negociable.",
+        },
       },
       {
         title: {
