@@ -17,8 +17,9 @@ const About = () => {
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="max-w-2xl space-y-8 mb-24">
           <p className="text-xl md:text-2xl text-foreground leading-relaxed">{t(a.intro)}</p>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t(a.body1)}</p>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t(a.body2)}</p>
+          {a.bodyParagraphs[language].map((p, i) => (
+            <p key={i} className="text-base md:text-lg text-muted-foreground leading-relaxed">{p}</p>
+          ))}
         </motion.div>
 
         <div className="border-t border-border pt-16">
