@@ -418,7 +418,7 @@ export const translations = {
           es: "Andreas gestionó las operaciones cashless de principio a fin con precisión y gran atención al detalle, asegurando una experiencia fluida y fiable. Demostró constantemente control, profesionalidad y responsabilidad.",
         },
         name: "Renzo Puccini",
-        role: { en: "Head of Ticketing & Cashless", it: "Head of Ticketing & Cashless", es: "Head of Ticketing & Cashless" },
+        role: { en: "Head of Ticketing & Cashless, elrow", it: "Head of Ticketing & Cashless, elrow", es: "Head of Ticketing & Cashless, elrow" },
       },
       {
         quote: {
