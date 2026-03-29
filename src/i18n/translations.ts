@@ -198,6 +198,7 @@ export const translations = {
       it: "Stai lavorando a qualcosa di simile? Parliamone.",
       es: "¿Trabajas en algo similar? Hablemos.",
     },
+    cta_button: { en: "Start a conversation", it: "Inizia una conversazione", es: "Iniciar una conversación" },
     role_label: { en: "Role", it: "Ruolo", es: "Rol" },
     outcome_label: { en: "Outcome", it: "Risultato", es: "Resultado" },
     cases: [
