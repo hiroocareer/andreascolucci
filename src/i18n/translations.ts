@@ -25,7 +25,7 @@ export const translations = {
       es: "Si estás trabajando en un evento complejo, hablemos.",
     },
     cta_primary: { en: "Work with me", it: "Lavoriamo insieme", es: "Trabajemos juntos" },
-    cta_secondary: { en: "Download CV", it: "Scarica CV", es: "Descargar CV" },
+    cta_secondary: { en: "LinkedIn", it: "LinkedIn", es: "LinkedIn" },
     availability: {
       en: "Available for selected projects — currently open to new conversations.",
       it: "Disponibile per progetti selezionati — aperto a nuove conversazioni.",
