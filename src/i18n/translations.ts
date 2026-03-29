@@ -232,6 +232,39 @@ export const translations = {
       {
         number: "02",
         title: {
+          en: "Kappa FuturFestival — Turin",
+          it: "Kappa FuturFestival — Torino",
+          es: "Kappa FuturFestival — Turín",
+        },
+        highlight: {
+          en: "10 editions — 3 days — 100,000+ attendees",
+          it: "10 edizioni — 3 giorni — oltre 100.000 partecipanti",
+          es: "10 ediciones — 3 días — más de 100.000 asistentes",
+        },
+        context: {
+          en: "A decade-long partnership with one of Europe's most respected electronic music festivals, ranked 7th best in the world.",
+          it: "Una collaborazione decennale con uno dei festival di musica elettronica più rispettati d'Europa, votato 7° migliore al mondo.",
+          es: "Una colaboración de una década con uno de los festivales de música electrónica más respetados de Europa, votado 7° mejor del mundo.",
+        },
+        details: {
+          en: ["10 consecutive editions", "Scaled from 50K to 100K+ attendees", "3-day festival format", "Voted 7th best festival in the world"],
+          it: ["10 edizioni consecutive", "Cresciuto da 50K a oltre 100K partecipanti", "Formato festival di 3 giorni", "Votato 7° miglior festival al mondo"],
+          es: ["10 ediciones consecutivas", "Crecimiento de 50K a más de 100K asistentes", "Formato festival de 3 días", "Votado 7° mejor festival del mundo"],
+        },
+        role: {
+          en: "End-to-end operational management across all editions. Scaled systems, teams, and processes alongside the festival's growth from a mid-size event to a world-class production.",
+          it: "Gestione operativa end-to-end in tutte le edizioni. Scalato sistemi, team e processi insieme alla crescita del festival da evento medio a produzione di livello mondiale.",
+          es: "Gestión operativa end-to-end en todas las ediciones. Escalado de sistemas, equipos y procesos junto al crecimiento del festival de evento mediano a producción de clase mundial.",
+        },
+        outcome: {
+          en: "Sustained operational excellence across a decade of growth. Systems and processes evolved with the festival, maintaining reliability at every scale. Revenue and capacity scaled dramatically with zero degradation in operational quality.",
+          it: "Eccellenza operativa sostenuta in un decennio di crescita. Sistemi e processi si sono evoluti con il festival, mantenendo affidabilità a ogni scala. Ricavi e capienza cresciuti in modo significativo senza alcun calo nella qualità operativa.",
+          es: "Excelencia operativa sostenida a lo largo de una década de crecimiento. Sistemas y procesos evolucionaron con el festival, manteniendo fiabilidad a cada escala. Ingresos y capacidad crecieron significativamente sin degradación en la calidad operativa.",
+        },
+      },
+      {
+        number: "03",
+        title: {
           en: "Monegros Desert Festival",
           it: "Monegros Desert Festival",
           es: "Monegros Desert Festival",
