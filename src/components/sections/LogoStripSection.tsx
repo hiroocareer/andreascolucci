@@ -11,14 +11,14 @@ import logoCampovolo from "@/assets/logos/campovolo.png";
 import logoMonegros from "@/assets/logos/monegros.png";
 
 const logos = [
-  { src: logoUltra, alt: "Ultra Music Festival" },
-  { src: logoF1, alt: "Formula 1" },
-  { src: logoElrow, alt: "elrow" },
-  { src: logoSonar, alt: "Sónar" },
-  { src: logoKappaFutur, alt: "Kappa Futur Festival" },
-  { src: logoMotogp, alt: "MotoGP" },
-  { src: logoCampovolo, alt: "Campovolo" },
-  { src: logoMonegros, alt: "Monegros Desert Festival" },
+  { src: logoUltra, alt: "Ultra Music Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoF1, alt: "Formula 1", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoElrow, alt: "elrow", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoSonar, alt: "Sónar", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoKappaFutur, alt: "Kappa Futur Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoMotogp, alt: "MotoGP", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoCampovolo, alt: "Campovolo", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoMonegros, alt: "Monegros Desert Festival", className: "opacity-70 hover:opacity-100 mix-blend-multiply" },
 ];
 
 const LogoStripSection = () => {
@@ -42,7 +42,7 @@ const LogoStripSection = () => {
       <div className="flex animate-logo-scroll group-hover:[animation-play-state:paused]">
           {allLogos.map((logo, index) => (
             <div key={`${logo.alt}-${index}`} className="flex-shrink-0 flex items-center justify-center px-8 md:px-12">
-              <img src={logo.src} alt={logo.alt} loading="lazy" className="h-12 md:h-16 w-auto object-contain grayscale brightness-0 opacity-60 hover:opacity-100 transition-all duration-500" />
+              <img src={logo.src} alt={logo.alt} loading="lazy" className={`h-12 md:h-16 w-auto object-contain transition-all duration-500 ${logo.className}`} />
             </div>
           ))}
         </div>
