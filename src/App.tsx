@@ -13,6 +13,7 @@ import Work from "./pages/Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/:lang/about" element={<LanguageWrapper><About /></LanguageWrapper>} />
           <Route path="/:lang/contact" element={<LanguageWrapper><Contact /></LanguageWrapper>} />
           
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
