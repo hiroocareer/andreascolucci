@@ -11,14 +11,14 @@ import logoCampovolo from "@/assets/logos/campovolo.png";
 import logoMonegros from "@/assets/logos/monegros.png";
 
 const logos = [
-  { src: logoUltra, alt: "Ultra Music Festival" },
-  { src: logoF1, alt: "Formula 1" },
-  { src: logoElrow, alt: "elrow" },
-  { src: logoSonar, alt: "Sónar" },
-  { src: logoKappaFutur, alt: "Kappa Futur Festival" },
-  { src: logoMotogp, alt: "MotoGP" },
-  { src: logoCampovolo, alt: "Campovolo" },
-  { src: logoMonegros, alt: "Monegros Desert Festival" },
+  { src: logoUltra, alt: "Ultra Music Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoF1, alt: "Formula 1", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoElrow, alt: "elrow", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoSonar, alt: "Sónar", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoKappaFutur, alt: "Kappa Futur Festival", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoMotogp, alt: "MotoGP", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoCampovolo, alt: "Campovolo", className: "brightness-0 opacity-60 hover:opacity-100" },
+  { src: logoMonegros, alt: "Monegros Desert Festival", className: "opacity-70 hover:opacity-100 mix-blend-multiply" },
 ];
 
 const LogoStripSection = () => {
