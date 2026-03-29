@@ -7,7 +7,7 @@ interface CaseStudyCardProps {
   title: string;
   highlight: string;
   context: string;
-  details: string[];
+  details: readonly string[];
   role: string;
   outcome: string;
   image: string;
