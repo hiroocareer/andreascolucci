@@ -11,8 +11,10 @@ import AboutSection from "@/components/sections/AboutSection";
 import AvailabilitySection from "@/components/sections/AvailabilitySection";
 import WorkWithMeSection from "@/components/sections/WorkWithMeSection";
 import ContactSection from "@/components/sections/ContactSection";
+import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
+  useSEO();
   return (
     <main className="min-h-screen bg-background">
       <HeroSection />

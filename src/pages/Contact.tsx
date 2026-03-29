@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import { useTranslation } from "@/i18n/useTranslation";
+import { useSEO } from "@/hooks/useSEO";
 
 const Contact = () => {
   const { t, translations } = useTranslation();

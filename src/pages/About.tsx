@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n/useTranslation";
+import { useSEO } from "@/hooks/useSEO";
 
 const About = () => {
+  useSEO();
   const { t, language, translations } = useTranslation();
   const a = translations.aboutPage;
   const principles = a.principles[language];

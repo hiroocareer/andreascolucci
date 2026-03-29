@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { useTranslation } from "@/i18n/useTranslation";
+import { useSEO } from "@/hooks/useSEO";
 
 import caseMonegros from "@/assets/monegros-new.jpg";
 import caseCampovolo from "@/assets/case-campovolo.jpg";
