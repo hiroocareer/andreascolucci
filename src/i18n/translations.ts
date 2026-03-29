@@ -296,7 +296,7 @@ export const translations = {
         },
       },
       {
-        number: "03",
+        number: "04",
         title: {
           en: "Sónar Festival Barcelona",
           it: "Sónar Festival Barcelona",
