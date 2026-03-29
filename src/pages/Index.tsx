@@ -4,6 +4,7 @@ import PositioningSection from "@/components/sections/PositioningSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 import GlobalExperienceSection from "@/components/sections/GlobalExperienceSection";
+import ReferencesSection from "@/components/sections/ReferencesSection";
 import WhenInvolvedSection from "@/components/sections/WhenInvolvedSection";
 import AboutSection from "@/components/sections/AboutSection";
 import AvailabilitySection from "@/components/sections/AvailabilitySection";
