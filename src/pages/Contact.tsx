@@ -30,7 +30,7 @@ const Contact = () => {
               </div>
               <div>
                 <span className="label-text block mb-3">{t(cs.linkedin_label)}</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-colors story-link">{t(cs.linkedin_text)}</a>
+                <a href="https://www.linkedin.com/in/andreascolucci/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-colors story-link">{t(cs.linkedin_text)}</a>
               </div>
               <div className="border-t border-border pt-10">
                 <span className="label-text block mb-3">{t(translations.availability.label)}</span>

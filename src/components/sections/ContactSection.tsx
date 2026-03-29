@@ -23,7 +23,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <span className="label-text block mb-2">{t(c.linkedin_label)}</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-colors story-link">
+                <a href="https://www.linkedin.com/in/andreascolucci/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-colors story-link">
                   {t(c.linkedin_text)}
                 </a>
               </div>
