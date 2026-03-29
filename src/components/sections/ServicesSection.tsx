@@ -18,7 +18,7 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           {s.items.map((service, index) => (
-            <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8">
+            <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8 flex flex-col">
               <h3 className="text-lg font-medium text-foreground mb-4 tracking-tight">{t(service.title)}</h3>
               {"description" in service && (
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">{t((service as any).description)}</p>
