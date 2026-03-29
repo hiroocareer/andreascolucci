@@ -1,0 +1,638 @@
+export type Language = "en" | "it" | "es";
+
+export const translations = {
+  // Navigation
+  nav: {
+    home: { en: "Home", it: "Home", es: "Inicio" },
+    work: { en: "Work", it: "Lavori", es: "Trabajos" },
+    about: { en: "About", it: "Chi sono", es: "Sobre mí" },
+    contact: { en: "Contact", it: "Contatto", es: "Contacto" },
+  },
+
+  // Hero
+  hero: {
+    name: { en: "Andreas Colucci", it: "Andreas Colucci", es: "Andreas Colucci" },
+    headline1: { en: "When operations break,", it: "Quando le operazioni saltano,", es: "Cuando las operaciones fallan," },
+    headline2: { en: "I take control.", it: "prendo il controllo.", es: "tomo el control." },
+    subtitle: {
+      en: "Large-scale events. Real-time execution. Critical problem solving.",
+      it: "Eventi su larga scala. Esecuzione in tempo reale. Problem solving critico.",
+      es: "Eventos a gran escala. Ejecución en tiempo real. Resolución de problemas críticos.",
+    },
+    cta_line: {
+      en: "If you're working on a complex event, let's talk.",
+      it: "Se stai lavorando a un evento complesso, parliamone.",
+      es: "Si estás trabajando en un evento complejo, hablemos.",
+    },
+    cta_primary: { en: "Work with me", it: "Lavoriamo insieme", es: "Trabajemos juntos" },
+    cta_secondary: { en: "Download CV", it: "Scarica CV", es: "Descargar CV" },
+    availability: {
+      en: "Available for selected projects — currently open to new conversations.",
+      it: "Disponibile per progetti selezionati — aperto a nuove conversazioni.",
+      es: "Disponible para proyectos seleccionados — abierto a nuevas conversaciones.",
+    },
+  },
+
+  // Impact
+  impact: {
+    label: { en: "Impact", it: "Impatto", es: "Impacto" },
+    title: { en: "By the numbers", it: "I numeri", es: "En cifras" },
+    stats: [
+      {
+        value: "110,000",
+        label: {
+          en: "attendees managed in a single event",
+          it: "partecipanti gestiti in un singolo evento",
+          es: "asistentes gestionados en un solo evento",
+        },
+      },
+      {
+        value: "95",
+        label: {
+          en: "team members managed",
+          it: "membri del team gestiti",
+          es: "miembros del equipo gestionados",
+        },
+      },
+      {
+        value: "24h",
+        label: {
+          en: "near-continuous execution cycles",
+          it: "cicli operativi quasi continui",
+          es: "ciclos de ejecución casi continuos",
+        },
+      },
+      {
+        value: "100+",
+        label: {
+          en: "large-scale events delivered",
+          it: "eventi su larga scala completati",
+          es: "eventos a gran escala realizados",
+        },
+      },
+    ],
+    statement1: {
+      en: "Most operational failures are predictable.",
+      it: "La maggior parte dei problemi operativi è prevedibile.",
+      es: "La mayoría de los fallos operativos son predecibles.",
+    },
+    statement2: {
+      en: "The problem is they're usually noticed too late.",
+      it: "Il problema è che di solito vengono notati troppo tardi.",
+      es: "El problema es que suelen detectarse demasiado tarde.",
+    },
+  },
+
+  // Logo Strip
+  logoStrip: {
+    label: { en: "Environments", it: "Ambienti", es: "Entornos" },
+    title: { en: "Where I've Operated", it: "Dove ho operato", es: "Donde he operado" },
+  },
+
+  // Positioning
+  positioning: {
+    line1: {
+      en: "Events run smoothly until something breaks.",
+      it: "Gli eventi funzionano finché qualcosa si rompe.",
+      es: "Los eventos funcionan hasta que algo falla.",
+    },
+    line2: {
+      en: "That's when I step in.",
+      it: "È lì che intervengo.",
+      es: "Ahí es cuando intervengo.",
+    },
+  },
+
+  // Services
+  services: {
+    label: { en: "Services", it: "Servizi", es: "Servicios" },
+    title: { en: "What I do", it: "Cosa faccio", es: "Lo que hago" },
+    items: [
+      {
+        title: {
+          en: "Critical Event Operations",
+          it: "Operazioni critiche per eventi",
+          es: "Operaciones críticas para eventos",
+        },
+        description: {
+          en: "Operational leadership for large-scale events where reliability, coordination, and control are non-negotiable.",
+          it: "Leadership operativa per eventi su larga scala dove affidabilità, coordinamento e controllo non sono negoziabili.",
+          es: "Liderazgo operativo para eventos a gran escala donde la fiabilidad, la coordinación y el control no son negociables.",
+        },
+      },
+      {
+        title: {
+          en: "Onsite Control & Decision Making",
+          it: "Controllo sul campo e decisioni in tempo reale",
+          es: "Control en sitio y toma de decisiones",
+        },
+        description: {
+          en: "Real-time operational presence during events. I manage issues as they happen, take decisions under pressure, and maintain stability when things move fast.",
+          it: "Presenza operativa in tempo reale durante gli eventi. Gestisco i problemi nel momento in cui si verificano, prendo decisioni sotto pressione e mantengo la stabilità quando tutto si muove velocemente.",
+          es: "Presencia operativa en tiempo real durante eventos. Gestiono problemas en el momento, tomo decisiones bajo presión y mantengo la estabilidad cuando todo se mueve rápido.",
+        },
+      },
+      {
+        title: {
+          en: "Systems & Flow Management",
+          it: "Gestione sistemi e flussi",
+          es: "Gestión de sistemas y flujos",
+        },
+        items: {
+          en: ["Cashless payment systems", "Ticketing systems", "Access control and crowd flow", "Vendor and F&B operations"],
+          it: ["Sistemi di pagamento cashless", "Sistemi di biglietteria", "Controllo accessi e flussi", "Operazioni vendor e F&B"],
+          es: ["Sistemas de pago cashless", "Sistemas de ticketing", "Control de accesos y flujos", "Operaciones de vendors y F&B"],
+        },
+        closing: {
+          en: "I work on systems that must perform in real time under pressure.",
+          it: "Lavoro su sistemi che devono funzionare in tempo reale sotto pressione.",
+          es: "Trabajo en sistemas que deben funcionar en tiempo real bajo presión.",
+        },
+      },
+    ],
+    cta_text: {
+      en: "If you're dealing with operational complexity, feel free to reach out.",
+      it: "Se stai gestendo complessità operativa, contattami.",
+      es: "Si estás gestionando complejidad operativa, contáctame.",
+    },
+    cta_button: { en: "Let's talk", it: "Parliamone", es: "Hablemos" },
+  },
+
+  // Global Experience
+  globalExperience: {
+    label: { en: "Reach", it: "Raggio d'azione", es: "Alcance" },
+    title: { en: "Global Experience", it: "Esperienza globale", es: "Experiencia global" },
+    stat1: {
+      en: "300+ events across 20+ countries.",
+      it: "300+ eventi in oltre 20 paesi.",
+      es: "300+ eventos en más de 20 países.",
+    },
+    stat2: {
+      en: "10 years operating in high-complexity environments.",
+      it: "10 anni di operatività in ambienti ad alta complessità.",
+      es: "10 años operando en entornos de alta complejidad.",
+    },
+    description: {
+      en: "Repeated exposure to high-pressure environments across different countries and systems.",
+      it: "Esposizione ripetuta ad ambienti ad alta pressione in diversi paesi e sistemi.",
+      es: "Exposición repetida a entornos de alta presión en diferentes países y sistemas.",
+    },
+  },
+
+  // Case Studies
+  caseStudies: {
+    label: { en: "Selected work", it: "Lavori selezionati", es: "Trabajos seleccionados" },
+    title: { en: "Case Studies", it: "Case studies", es: "Casos de estudio" },
+    cta_text: {
+      en: "Working on something similar? Let's talk.",
+      it: "Stai lavorando a qualcosa di simile? Parliamone.",
+      es: "¿Trabajas en algo similar? Hablemos.",
+    },
+    cta_button: { en: "Start a conversation", it: "Inizia una conversazione", es: "Iniciar una conversación" },
+    cases: [
+      {
+        number: "01",
+        title: {
+          en: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+          it: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+          es: "Campovolo — Ligabue 'La Notte di Certe Notti'",
+        },
+        highlight: { en: "110,000 attendees", it: "110.000 partecipanti", es: "110.000 asistentes" },
+        context: {
+          en: "One of the largest concerts in Italy, with zero margin for error.",
+          it: "Uno dei più grandi concerti in Italia, senza margine di errore.",
+          es: "Uno de los conciertos más grandes de Italia, sin margen de error.",
+        },
+        details: {
+          en: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
+          it: ["110.000 partecipanti", "Concerto a scala stadio", "Zero margine di errore"],
+          es: ["110.000 asistentes", "Concierto a escala de estadio", "Sin margen de error"],
+        },
+        role: {
+          en: "Operational systems oversight — payment systems, access control, and crowd flow management at maximum capacity.",
+          it: "Supervisione dei sistemi operativi — sistemi di pagamento, controllo accessi e gestione flussi a massima capienza.",
+          es: "Supervisión de sistemas operativos — sistemas de pago, control de acceso y gestión de flujos a máxima capacidad.",
+        },
+        outcome: {
+          en: "Seamless execution at full capacity. All systems performed without interruption across the entire event cycle. No operational failures recorded.",
+          it: "Esecuzione impeccabile a piena capienza. Tutti i sistemi hanno funzionato senza interruzioni durante l'intero ciclo dell'evento. Nessun guasto operativo registrato.",
+          es: "Ejecución impecable a máxima capacidad. Todos los sistemas funcionaron sin interrupciones durante todo el ciclo del evento. Sin fallos operativos registrados.",
+        },
+      },
+      {
+        number: "02",
+        title: {
+          en: "Monegros Desert Festival",
+          it: "Monegros Desert Festival",
+          es: "Monegros Desert Festival",
+        },
+        highlight: {
+          en: "70,000 attendees — 22 hours",
+          it: "70.000 partecipanti — 22 ore",
+          es: "70.000 asistentes — 22 horas",
+        },
+        context: {
+          en: "A 22-hour continuous event in a remote, high-complexity environment.",
+          it: "Un evento continuo di 22 ore in un ambiente remoto e ad alta complessità.",
+          es: "Un evento continuo de 22 horas en un entorno remoto y de alta complejidad.",
+        },
+        details: {
+          en: ["70,000 attendees", "22-hour continuous event", "Distributed logistics across desert terrain"],
+          it: ["70.000 partecipanti", "Evento continuo di 22 ore", "Logistica distribuita in ambiente desertico"],
+          es: ["70.000 asistentes", "Evento continuo de 22 horas", "Logística distribuida en terreno desértico"],
+        },
+        role: {
+          en: "End-to-end operational coordination across distributed stages, services, and vendor systems. Full control over logistics in an environment where infrastructure is temporary and conditions are extreme.",
+          it: "Coordinamento operativo end-to-end tra palchi distribuiti, servizi e sistemi vendor. Controllo totale sulla logistica in un ambiente con infrastrutture temporanee e condizioni estreme.",
+          es: "Coordinación operativa end-to-end entre escenarios distribuidos, servicios y sistemas de vendors. Control total sobre la logística en un entorno con infraestructura temporal y condiciones extremas.",
+        },
+        outcome: {
+          en: "Operations remained stable throughout the full 22-hour cycle with no critical disruptions. Coordination held under extreme environmental and logistical pressure.",
+          it: "Le operazioni sono rimaste stabili per l'intero ciclo di 22 ore senza interruzioni critiche. Il coordinamento ha tenuto sotto pressione ambientale e logistica estrema.",
+          es: "Las operaciones se mantuvieron estables durante todo el ciclo de 22 horas sin interrupciones críticas. La coordinación se mantuvo bajo presión ambiental y logística extrema.",
+        },
+      },
+      {
+        number: "03",
+        title: {
+          en: "Sónar Festival Barcelona",
+          it: "Sónar Festival Barcelona",
+          es: "Sónar Festival Barcelona",
+        },
+        highlight: {
+          en: "4 days — multi-venue — near 24h — 160,000 total",
+          it: "4 giorni — multi-venue — quasi 24h — 160.000 totali",
+          es: "4 días — multi-venue — casi 24h — 160.000 total",
+        },
+        context: {
+          en: "Four days of near-continuous operations across multiple venues with 160,000 total attendees.",
+          it: "Quattro giorni di operazioni quasi continue su più sedi con 160.000 partecipanti totali.",
+          es: "Cuatro días de operaciones casi continuas en múltiples sedes con 160.000 asistentes totales.",
+        },
+        details: {
+          en: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
+          it: ["4 giorni", "Sedi multiple", "Operazioni quasi 24 ore", "160.000 partecipanti totali"],
+          es: ["4 días", "Múltiples sedes", "Operaciones casi 24 horas", "160.000 asistentes totales"],
+        },
+        role: {
+          en: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
+          it: "Coordinamento operativo su più sedi e programmazione quasi continua. Gestione sistemi, flussi e risoluzione problemi in tempo reale su larga scala.",
+          es: "Coordinación operativa en múltiples sedes y programación casi continua. Gestión de sistemas, flujos y resolución de problemas en tiempo real a gran escala.",
+        },
+        outcome: {
+          en: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance. No operational disruptions despite scale and complexity.",
+          it: "Operazioni ininterrotte per quattro giorni su più sedi. Tutti i sistemi critici hanno mantenuto le prestazioni. Nessuna interruzione operativa nonostante scala e complessità.",
+          es: "Operaciones ininterrumpidas durante cuatro días en múltiples sedes. Todos los sistemas críticos mantuvieron rendimiento total. Sin interrupciones operativas a pesar de la escala y complejidad.",
+        },
+      },
+      {
+        number: "04",
+        title: {
+          en: "elrow Town Madrid",
+          it: "elrow Town Madrid",
+          es: "elrow Town Madrid",
+        },
+        highlight: {
+          en: "33,000 attendees/day — 2 days",
+          it: "33.000 partecipanti/giorno — 2 giorni",
+          es: "33.000 asistentes/día — 2 días",
+        },
+        context: {
+          en: "Two consecutive days of high-density operations with 33,000 attendees per day.",
+          it: "Due giorni consecutivi di operazioni ad alta densità con 33.000 partecipanti al giorno.",
+          es: "Dos días consecutivos de operaciones de alta densidad con 33.000 asistentes por día.",
+        },
+        details: {
+          en: ["33,000 attendees per day", "2 consecutive days", "High-density festival environment"],
+          it: ["33.000 partecipanti al giorno", "2 giorni consecutivi", "Ambiente festival ad alta densità"],
+          es: ["33.000 asistentes por día", "2 días consecutivos", "Entorno de festival de alta densidad"],
+        },
+        role: {
+          en: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control under sustained pressure.",
+          it: "Responsabile operazioni sul campo. Decisioni in tempo reale in zone ad alta densità, coordinamento vendor e controllo flussi sotto pressione continua.",
+          es: "Responsable de operaciones en sitio. Toma de decisiones en tiempo real en zonas de alta densidad, coordinación de vendors y control de flujos bajo presión continua.",
+        },
+        outcome: {
+          en: "Controlled, stable environment maintained across both days despite extreme density conditions. No escalations or critical incidents.",
+          it: "Ambiente controllato e stabile mantenuto per entrambi i giorni nonostante le condizioni di densità estrema. Nessuna escalation o incidenti critici.",
+          es: "Entorno controlado y estable mantenido durante ambos días a pesar de las condiciones de densidad extrema. Sin escalaciones ni incidentes críticos.",
+        },
+      },
+      {
+        number: "05",
+        title: {
+          en: "MotoGP Catalunya — Hospitality & F&B Area",
+          it: "MotoGP Catalunya — Area Hospitality & F&B",
+          es: "MotoGP Catalunya — Área Hospitality y F&B",
+        },
+        highlight: {
+          en: "High-volume F&B — premium hospitality",
+          it: "F&B ad alto volume — hospitality premium",
+          es: "F&B de alto volumen — hospitality premium",
+        },
+        context: {
+          en: "Premium hospitality operations under high-volume conditions at the Montmeló circuit.",
+          it: "Operazioni hospitality premium in condizioni di alto volume al circuito di Montmeló.",
+          es: "Operaciones de hospitality premium en condiciones de alto volumen en el circuito de Montmeló.",
+        },
+        details: {
+          en: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
+          it: ["Operazioni F&B ad alto volume", "Ambiente hospitality premium", "Circuito di Montmeló"],
+          es: ["Operaciones F&B de alto volumen", "Entorno hospitality premium", "Circuito de Montmeló"],
+        },
+        role: {
+          en: "Operational management of hospitality and food & beverage areas. Payment system deployment and vendor coordination under premium service expectations.",
+          it: "Gestione operativa delle aree hospitality e food & beverage. Implementazione sistemi di pagamento e coordinamento vendor con standard di servizio premium.",
+          es: "Gestión operativa de áreas de hospitality y food & beverage. Implementación de sistemas de pago y coordinación de vendors con estándares de servicio premium.",
+        },
+        outcome: {
+          en: "Premium service standards maintained under high-volume conditions. Payment and service flow operated without interruption.",
+          it: "Standard di servizio premium mantenuti in condizioni di alto volume. Flussi di pagamento e servizio senza interruzioni.",
+          es: "Estándares de servicio premium mantenidos en condiciones de alto volumen. Flujos de pago y servicio sin interrupciones.",
+        },
+      },
+      {
+        number: "06",
+        title: {
+          en: "Stadio Olimpico — Football Season",
+          it: "Stadio Olimpico — Stagione calcistica",
+          es: "Stadio Olimpico — Temporada de fútbol",
+        },
+        highlight: {
+          en: "Full season — recurring operations",
+          it: "Intera stagione — operazioni ricorrenti",
+          es: "Temporada completa — operaciones recurrentes",
+        },
+        context: {
+          en: "Recurring high-volume operations across an entire football season.",
+          it: "Operazioni ricorrenti ad alto volume per un'intera stagione calcistica.",
+          es: "Operaciones recurrentes de alto volumen durante una temporada de fútbol completa.",
+        },
+        details: {
+          en: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
+          it: ["Operazioni ricorrenti ad alto volume", "Implementazione sistema di pagamento", "Integrazione vendor F&B"],
+          es: ["Operaciones recurrentes de alto volumen", "Implementación de sistema de pago", "Integración de vendors F&B"],
+        },
+        role: {
+          en: "Implementation and management of cashless payment systems integrated with F&B vendor operations. Built a repeatable operational framework for match days.",
+          it: "Implementazione e gestione di sistemi di pagamento cashless integrati con le operazioni vendor F&B. Creazione di un framework operativo ripetibile per le giornate di gara.",
+          es: "Implementación y gestión de sistemas de pago cashless integrados con operaciones de vendors F&B. Creación de un framework operativo repetible para los días de partido.",
+        },
+        outcome: {
+          en: "Reliable, consistent operational framework delivering stable results across the full season. Systems held under recurring high-pressure conditions.",
+          it: "Framework operativo affidabile e consistente con risultati stabili per tutta la stagione. I sistemi hanno retto sotto condizioni di alta pressione ricorrenti.",
+          es: "Framework operativo fiable y consistente con resultados estables durante toda la temporada. Los sistemas se mantuvieron bajo condiciones de alta presión recurrentes.",
+        },
+      },
+    ],
+  },
+
+  // References
+  references: {
+    label: { en: "Social Proof", it: "Referenze", es: "Referencias" },
+    title: { en: "References", it: "Referenze", es: "Referencias" },
+    items: [
+      {
+        quote: {
+          en: "When things start falling apart onsite, Andreas is the person you want in the room. He doesn't react — he controls.",
+          it: "Quando le cose iniziano a crollare sul campo, Andreas è la persona che vuoi nella stanza. Non reagisce — controlla.",
+          es: "Cuando las cosas empiezan a desmoronarse en sitio, Andreas es la persona que quieres en la sala. No reacciona — controla.",
+        },
+        name: "Marco Bencini",
+        role: { en: "Head of Operations", it: "Head of Operations", es: "Head of Operations" },
+        company: "Cashless Group",
+      },
+      {
+        quote: {
+          en: "I've worked with hundreds of operations people. Andreas is one of the very few who can hold a full operation together under real pressure — and make it look simple.",
+          it: "Ho lavorato con centinaia di professionisti delle operations. Andreas è uno dei pochissimi che riesce a tenere insieme un'intera operazione sotto pressione reale — e a farla sembrare semplice.",
+          es: "He trabajado con cientos de profesionales de operaciones. Andreas es uno de los muy pocos que puede mantener una operación completa bajo presión real — y hacer que parezca simple.",
+        },
+        name: "David Pallàs",
+        role: { en: "CEO", it: "CEO", es: "CEO" },
+        company: "Tecnopagos",
+      },
+      {
+        quote: {
+          en: "He doesn't just manage logistics. He sees the whole system, identifies where it will break, and fixes it before anyone else notices.",
+          it: "Non gestisce solo la logistica. Vede l'intero sistema, identifica dove si romperà e lo ripara prima che qualcun altro se ne accorga.",
+          es: "No solo gestiona logística. Ve todo el sistema, identifica dónde va a fallar y lo soluciona antes de que nadie más lo note.",
+        },
+        name: "Riccardo Testoni",
+        role: { en: "Project Manager", it: "Project Manager", es: "Project Manager" },
+        company: "Weezevent Italia",
+      },
+    ],
+  },
+
+  // When Involved
+  whenInvolved: {
+    label: { en: "When to call", it: "Quando chiamarmi", es: "Cuándo llamarme" },
+    title: { en: "When I get involved", it: "Quando intervengo", es: "Cuándo intervengo" },
+    triggers: {
+      en: [
+        "When an event scales beyond the original plan",
+        "When operational complexity increases and control is at risk",
+        "When systems — payments, access, flows — must work seamlessly under pressure",
+        "When issues arise during execution and decisions can't wait",
+        "When control needs to be re-established quickly",
+      ],
+      it: [
+        "Quando un evento supera il piano originale",
+        "Quando la complessità operativa aumenta e il controllo è a rischio",
+        "Quando i sistemi — pagamenti, accessi, flussi — devono funzionare sotto pressione",
+        "Quando emergono problemi durante l'esecuzione e le decisioni non possono aspettare",
+        "Quando il controllo deve essere ristabilito rapidamente",
+      ],
+      es: [
+        "Cuando un evento supera el plan original",
+        "Cuando la complejidad operativa aumenta y el control está en riesgo",
+        "Cuando los sistemas — pagos, accesos, flujos — deben funcionar bajo presión",
+        "Cuando surgen problemas durante la ejecución y las decisiones no pueden esperar",
+        "Cuando el control necesita restablecerse rápidamente",
+      ],
+    },
+  },
+
+  // About Section (homepage)
+  aboutSection: {
+    label: { en: "About", it: "Chi sono", es: "Sobre mí" },
+    title: { en: "Andreas Colucci", it: "Andreas Colucci", es: "Andreas Colucci" },
+    intro: {
+      en: "I focus on execution, not theory.",
+      it: "Mi concentro sull'esecuzione, non sulla teoria.",
+      es: "Me concentro en la ejecución, no en la teoría.",
+    },
+    body1: {
+      en: "Years of work in high-pressure, large-scale event environments — from festivals to stadiums, from 8,000 to 160,000 people. The common thread is making decisions under pressure, in real time, when the cost of inaction is higher than the cost of being wrong.",
+      it: "Anni di lavoro in ambienti ad alta pressione ed eventi su larga scala — dai festival agli stadi, da 8.000 a 160.000 persone. Il filo conduttore è prendere decisioni sotto pressione, in tempo reale, quando il costo dell'inazione è più alto del costo di sbagliare.",
+      es: "Años de trabajo en entornos de alta presión y eventos a gran escala — de festivales a estadios, de 8.000 a 160.000 personas. El hilo conductor es tomar decisiones bajo presión, en tiempo real, cuando el coste de no actuar es mayor que el coste de equivocarse.",
+    },
+    body2: {
+      en: "I anticipate failures before they happen and build operational systems that hold when everything else is moving. The work is not about planning on paper — it's about control on the ground.",
+      it: "Anticipo i problemi prima che si verifichino e costruisco sistemi operativi che reggono quando tutto il resto si muove. Il lavoro non riguarda la pianificazione su carta — riguarda il controllo sul campo.",
+      es: "Anticipo los problemas antes de que ocurran y construyo sistemas operativos que se mantienen cuando todo lo demás se mueve. El trabajo no es planificar sobre el papel — es controlar sobre el terreno.",
+    },
+  },
+
+  // Availability
+  availability: {
+    label: { en: "Availability", it: "Disponibilità", es: "Disponibilidad" },
+    title: {
+      en: "Available for selected projects in 2026",
+      it: "Disponibile per progetti selezionati nel 2026",
+      es: "Disponible para proyectos seleccionados en 2026",
+    },
+    subtitle: { en: "Limited availability", it: "Disponibilità limitata", es: "Disponibilidad limitada" },
+  },
+
+  // Work With Me
+  workWithMe: {
+    label: { en: "Engagement", it: "Collaborazione", es: "Colaboración" },
+    title: { en: "Work with me", it: "Lavoriamo insieme", es: "Trabajemos juntos" },
+    intro: {
+      en: "I typically get involved in projects where:",
+      it: "Di solito intervengo in progetti dove:",
+      es: "Normalmente intervengo en proyectos donde:",
+    },
+    engagements: {
+      en: ["Scale is high", "Operations are critical", "Execution cannot fail"],
+      it: ["La scala è elevata", "Le operazioni sono critiche", "L'esecuzione non può fallire"],
+      es: ["La escala es alta", "Las operaciones son críticas", "La ejecución no puede fallar"],
+    },
+    body: {
+      en: "If you're facing a complex setup or want a second opinion on your operations, feel free to reach out.",
+      it: "Se stai affrontando un setup complesso o vuoi un secondo parere sulle tue operazioni, contattami.",
+      es: "Si estás enfrentando un setup complejo o quieres una segunda opinión sobre tus operaciones, contáctame.",
+    },
+    cta: { en: "Start a conversation", it: "Inizia una conversazione", es: "Iniciar una conversación" },
+  },
+
+  // Contact Section
+  contactSection: {
+    label: { en: "Contact", it: "Contatto", es: "Contacto" },
+    title: { en: "Let's talk", it: "Parliamone", es: "Hablemos" },
+    description: {
+      en: "If you're working on an event and want to make sure operations stay under control, I'm happy to have a quick conversation.",
+      it: "Se stai lavorando a un evento e vuoi assicurarti che le operazioni restino sotto controllo, sono disponibile per una conversazione.",
+      es: "Si estás trabajando en un evento y quieres asegurarte de que las operaciones se mantengan bajo control, estoy disponible para una conversación.",
+    },
+    email_label: { en: "Email", it: "Email", es: "Email" },
+    linkedin_label: { en: "LinkedIn", it: "LinkedIn", es: "LinkedIn" },
+    linkedin_text: { en: "View Profile", it: "Vedi profilo", es: "Ver perfil" },
+  },
+
+  // Contact Form
+  contactForm: {
+    name_label: { en: "Name", it: "Nome", es: "Nombre" },
+    name_placeholder: { en: "Your name", it: "Il tuo nome", es: "Tu nombre" },
+    email_label: { en: "Email", it: "Email", es: "Email" },
+    email_placeholder: { en: "your@email.com", it: "tua@email.com", es: "tu@email.com" },
+    message_label: { en: "Message", it: "Messaggio", es: "Mensaje" },
+    message_placeholder: {
+      en: "Tell me about your event...",
+      it: "Raccontami del tuo evento...",
+      es: "Cuéntame sobre tu evento...",
+    },
+    submit: { en: "Send Message", it: "Invia messaggio", es: "Enviar mensaje" },
+    sending: { en: "Sending...", it: "Invio in corso...", es: "Enviando..." },
+    toast_title: { en: "Message sent.", it: "Messaggio inviato.", es: "Mensaje enviado." },
+    toast_description: {
+      en: "I'll get back to you shortly.",
+      it: "Ti risponderò a breve.",
+      es: "Te responderé pronto.",
+    },
+  },
+
+  // Footer
+  footer: {
+    navigation: { en: "Navigation", it: "Navigazione", es: "Navegación" },
+    contact: { en: "Contact", it: "Contatto", es: "Contacto" },
+    connect: { en: "Connect", it: "Collegamento", es: "Conexión" },
+    work_with_me: { en: "Work\nwith me", it: "Lavoriamo\ninsieme", es: "Trabajemos\njuntos" },
+    copyright: { en: "All rights reserved.", it: "Tutti i diritti riservati.", es: "Todos los derechos reservados." },
+    tagline: { en: "Senior Event Operations", it: "Senior Event Operations", es: "Senior Event Operations" },
+  },
+
+  // About Page
+  aboutPage: {
+    title: { en: "About", it: "Chi sono", es: "Sobre mí" },
+    intro: {
+      en: "Years of work in high-pressure, large-scale event environments — from festivals to stadiums, from 8,000 to 160,000 people.",
+      it: "Anni di lavoro in ambienti ad alta pressione ed eventi su larga scala — dai festival agli stadi, da 8.000 a 160.000 persone.",
+      es: "Años de trabajo en entornos de alta presión y eventos a gran escala — de festivales a estadios, de 8.000 a 160.000 personas.",
+    },
+    body1: {
+      en: "The common thread is execution under conditions where theory doesn't help. I make decisions under pressure, anticipate failures before they happen, and build operational systems that hold when everything else is moving.",
+      it: "Il filo conduttore è l'esecuzione in condizioni in cui la teoria non serve. Prendo decisioni sotto pressione, anticipo i problemi prima che si verifichino e costruisco sistemi operativi che reggono quando tutto il resto si muove.",
+      es: "El hilo conductor es la ejecución en condiciones donde la teoría no sirve. Tomo decisiones bajo presión, anticipo los problemas antes de que ocurran y construyo sistemas operativos que se mantienen cuando todo lo demás se mueve.",
+    },
+    body2: {
+      en: "The work is not about planning on paper. It's about control on the ground.",
+      it: "Il lavoro non riguarda la pianificazione su carta. Riguarda il controllo sul campo.",
+      es: "El trabajo no es planificar sobre el papel. Es controlar sobre el terreno.",
+    },
+    principles_label: { en: "Principles", it: "Principi", es: "Principios" },
+    principles_title: { en: "How I operate", it: "Come opero", es: "Cómo opero" },
+    principles: {
+      en: [
+        { title: "Execution over theory", text: "Plans are only as good as their execution. I focus on what happens on the ground." },
+        { title: "Decisions under pressure", text: "When things change — and they always do — I make clear decisions quickly." },
+        { title: "Anticipation", text: "The best problem is the one that never happens. I identify risks before they become failures." },
+        { title: "Systems that hold", text: "I build operational frameworks designed to perform reliably at scale." },
+      ],
+      it: [
+        { title: "Esecuzione, non teoria", text: "I piani valgono quanto la loro esecuzione. Mi concentro su quello che succede sul campo." },
+        { title: "Decisioni sotto pressione", text: "Quando le cose cambiano — e cambiano sempre — prendo decisioni chiare e rapide." },
+        { title: "Anticipazione", text: "Il problema migliore è quello che non si verifica mai. Identifico i rischi prima che diventino guasti." },
+        { title: "Sistemi che reggono", text: "Costruisco framework operativi progettati per funzionare in modo affidabile su larga scala." },
+      ],
+      es: [
+        { title: "Ejecución, no teoría", text: "Los planes solo valen tanto como su ejecución. Me concentro en lo que pasa sobre el terreno." },
+        { title: "Decisiones bajo presión", text: "Cuando las cosas cambian — y siempre cambian — tomo decisiones claras y rápidas." },
+        { title: "Anticipación", text: "El mejor problema es el que nunca ocurre. Identifico riesgos antes de que se conviertan en fallos." },
+        { title: "Sistemas que se mantienen", text: "Construyo frameworks operativos diseñados para funcionar de forma fiable a escala." },
+      ],
+    },
+  },
+
+  // Work Page
+  workPage: {
+    title: { en: "Selected Work", it: "Lavori selezionati", es: "Trabajos seleccionados" },
+    subtitle: {
+      en: "Large-scale events where operational control was critical. No fake metrics — just reliability, execution, and results.",
+      it: "Eventi su larga scala dove il controllo operativo era critico. Nessuna metrica inventata — solo affidabilità, esecuzione e risultati.",
+      es: "Eventos a gran escala donde el control operativo fue crítico. Sin métricas inventadas — solo fiabilidad, ejecución y resultados.",
+    },
+  },
+
+  // Contact Page
+  contactPage: {
+    title: { en: "Contact", it: "Contatto", es: "Contacto" },
+    subtitle: {
+      en: "For high-complexity events and critical operational environments. Let's discuss your project.",
+      it: "Per eventi ad alta complessità e ambienti operativi critici. Parliamo del tuo progetto.",
+      es: "Para eventos de alta complejidad y entornos operativos críticos. Hablemos de tu proyecto.",
+    },
+    availability_label: { en: "Availability", it: "Disponibilità", es: "Disponibilidad" },
+    availability_text: {
+      en: "Selected projects in 2026",
+      it: "Progetti selezionati nel 2026",
+      es: "Proyectos seleccionados en 2026",
+    },
+    availability_note: {
+      en: "High-complexity events / critical environments",
+      it: "Eventi ad alta complessità / ambienti critici",
+      es: "Eventos de alta complejidad / entornos críticos",
+    },
+  },
+
+  // Case Study Card labels
+  caseStudyCard: {
+    context: { en: "Context", it: "Contesto", es: "Contexto" },
+    role: { en: "Role", it: "Ruolo", es: "Rol" },
+    outcome: { en: "Outcome", it: "Risultato", es: "Resultado" },
+  },
+} as const;
+
+export type TranslationKey = keyof typeof translations;
