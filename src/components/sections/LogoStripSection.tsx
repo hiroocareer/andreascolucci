@@ -59,7 +59,7 @@ const LogoStripSection = () => {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                className="h-16 md:h-24 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               />
             </div>
           ))}
