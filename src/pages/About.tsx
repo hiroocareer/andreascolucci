@@ -31,8 +31,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
             {principles.map((item, index) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.08 }} viewport={{ once: true }} className="border-t border-border pt-6">
-                <h3 className="text-base font-medium text-foreground mb-2 tracking-tight">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                <h3 className="text-base md:text-lg font-medium text-foreground mb-2 tracking-tight">{item.title}</h3>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{item.text}</p>
               </motion.div>
             ))}
           </div>
