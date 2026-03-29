@@ -136,6 +136,11 @@ export const translations = {
           it: "Presenza operativa in tempo reale durante gli eventi. Gestisco i problemi nel momento in cui si verificano, prendo decisioni sotto pressione e mantengo la stabilità quando tutto si muove velocemente.",
           es: "Presencia operativa en tiempo real durante eventos. Gestiono problemas en el momento, tomo decisiones bajo presión y mantengo la estabilidad cuando todo se mueve rápido.",
         },
+        closing: {
+          en: "I make decisions in real time to keep operations under control.",
+          it: "Prendo decisioni in tempo reale per mantenere le operazioni sotto controllo.",
+          es: "Tomo decisiones en tiempo real para mantener las operaciones bajo control.",
+        },
       },
       {
         title: {

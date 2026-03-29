@@ -21,20 +21,20 @@ const ServicesSection = () => {
             <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8">
               <h3 className="text-lg font-medium text-foreground mb-4 tracking-tight">{t(service.title)}</h3>
               {"description" in service && (
-                <p className="text-sm text-muted-foreground leading-relaxed">{t((service as any).description)}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">{t((service as any).description)}</p>
               )}
               {"items" in service && (
-                <>
-                  <ul className="space-y-2 mb-6">
-                    {((service as any).items[language] as string[]).map((item: string) => (
-                      <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                        <span className="w-1 h-1 bg-foreground rounded-full mt-1.5 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="text-sm text-foreground font-medium leading-relaxed">{t((service as any).closing)}</p>
-                </>
+                <ul className="space-y-2 mb-6">
+                  {((service as any).items[language] as string[]).map((item: string) => (
+                    <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+                      <span className="w-1 h-1 bg-foreground rounded-full mt-1.5 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {"closing" in service && (
+                <p className="text-sm text-foreground font-semibold leading-relaxed mt-auto pt-4 border-t border-border/50">{t((service as any).closing)}</p>
               )}
             </motion.div>
           ))}
