@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 
 const HeroSection = () => {
@@ -39,9 +39,9 @@ const HeroSection = () => {
             {t(h.cta_primary)}
             <ArrowRight className="w-4 h-4" />
           </Link>
-          <a href="#" className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] border border-foreground text-foreground px-8 py-4 hover:bg-foreground hover:text-background transition-colors">
-            {t(h.cta_secondary)}
-            <Download className="w-4 h-4" />
+          <a href="https://www.linkedin.com/in/andreascolucci" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] border border-foreground text-foreground px-8 py-4 hover:bg-foreground hover:text-background transition-colors">
+            LinkedIn
+            <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>
 
