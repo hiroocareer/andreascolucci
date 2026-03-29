@@ -33,6 +33,14 @@ const LanguageWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+const getDefaultLanguage = (): Language => {
+  const browserLang = navigator.language?.split("-")[0]?.toLowerCase();
+  if (SUPPORTED_LANGS.includes(browserLang as Language)) {
+    return browserLang as Language;
+  }
+  return "en";
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -40,8 +48,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Default redirect to /en */}
-          <Route path="/" element={<Navigate to="/en" replace />} />
+          {/* Redirect root to browser language */}
+          <Route path="/" element={<Navigate to={`/${getDefaultLanguage()}`} replace />} />
           
           {/* Language-prefixed routes */}
           <Route path="/:lang" element={<LanguageWrapper><Index /></LanguageWrapper>} />
