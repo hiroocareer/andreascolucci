@@ -6,7 +6,7 @@ import {
 } from "react-simple-maps";
 import { motion } from "framer-motion";
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
 
 // ISO 3166-1 numeric codes for the countries
 const HIGHLIGHTED_COUNTRIES = new Set([
@@ -59,7 +59,10 @@ const WorldMap = memo(() => {
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies.map((geo) => {
-              const isHighlighted = HIGHLIGHTED_COUNTRIES.has(geo.id);
+              const name = geo.properties?.name;
+              // Exclude French Guiana (part of France in some topologies)
+              const isFrenchGuiana = name === "Fr. S. Antarctic Lands" || name === "French Guiana";
+              const isHighlighted = !isFrenchGuiana && HIGHLIGHTED_COUNTRIES.has(geo.id);
               return (
                 <Geography
                   key={geo.rsmKey}
