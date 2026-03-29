@@ -18,6 +18,8 @@ interface CaseStudyCardProps {
 
 const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index, imageFit = "cover" }: CaseStudyCardProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const { t, translations } = useTranslation();
+  const cs = translations.caseStudies;
   const isReversed = index % 2 !== 0;
   const fitClass = imageFit === "contain" ? "object-contain" : "object-cover";
 
