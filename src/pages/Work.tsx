@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { useTranslation } from "@/i18n/useTranslation";
+import { useSEO } from "@/hooks/useSEO";
 
 import caseMonegros from "@/assets/monegros-new.jpg";
 import caseCampovolo from "@/assets/case-campovolo.jpg";
@@ -16,6 +17,7 @@ const images = [caseCampovolo, caseMonegros, caseSonar, caseElrow, caseMotogp, c
 const workPageCaseIndices = [1, 0, 3, -1, 4, 5, 2]; // -1 = Dimensions (not in homepage translations)
 
 const Work = () => {
+  useSEO();
   const { t, language, translations } = useTranslation();
   const w = translations.workPage;
   const cs = translations.caseStudies;
