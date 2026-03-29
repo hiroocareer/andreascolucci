@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { X } from "lucide-react";
+import { useTranslation } from "@/i18n/useTranslation";
 
 interface CaseStudyCardProps {
   number: string;
@@ -17,6 +18,8 @@ interface CaseStudyCardProps {
 
 const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index, imageFit = "cover" }: CaseStudyCardProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const { t, translations } = useTranslation();
+  const cs = translations.caseStudies;
   const isReversed = index % 2 !== 0;
   const fitClass = imageFit === "contain" ? "object-contain" : "object-cover";
 
@@ -77,11 +80,11 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
 
           <div className={`${isReversed ? 'md:col-start-1 md:col-span-5 md:row-start-1' : 'md:col-start-7 md:col-span-6'} space-y-8`} style={{ direction: 'ltr' }}>
             <div>
-              <span className="label-text block mb-2">Role</span>
+              <span className="label-text block mb-2">{t(cs.role_label)}</span>
               <p className="text-sm text-foreground leading-relaxed">{role}</p>
             </div>
             <div>
-              <span className="label-text block mb-2">Outcome</span>
+              <span className="label-text block mb-2">{t(cs.outcome_label)}</span>
               <p className="text-sm text-foreground leading-relaxed">{outcome}</p>
             </div>
           </div>

@@ -50,10 +50,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link 
             to={`/${currentLang}`} 
-            className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors"
+            className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors truncate max-w-[180px] sm:max-w-none"
             onClick={closeMenu}
           >
-            Andreas Colucci - Event Tech & Operations Consultant
+            <span className="hidden sm:inline">Andreas Colucci - Event Tech & Operations Consultant</span>
+            <span className="sm:hidden">Andreas Colucci</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -97,13 +98,13 @@ const Navigation = () => {
 
           {/* Mobile: Language + Hamburger */}
           <div className="md:hidden flex items-center gap-3">
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-1">
               {languages.map((l) => (
                 <button
                   key={l.code}
                   onClick={() => switchLanguage(l.code)}
                   className={cn(
-                    "text-[10px] font-medium uppercase tracking-[0.15em] px-1.5 py-1 transition-colors",
+                    "text-[10px] font-medium uppercase tracking-[0.15em] px-2 py-2 min-w-[32px] min-h-[32px] flex items-center justify-center transition-colors",
                     currentLang === l.code
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
