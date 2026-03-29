@@ -42,7 +42,7 @@ const Footer = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="md:col-span-3">
               <span className="label-text block mb-6">{t(f.connect)}</span>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground transition-colors text-base group">
+              <a href="https://www.linkedin.com/in/andreascolucci/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground transition-colors text-base group">
                 LinkedIn
                 <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>

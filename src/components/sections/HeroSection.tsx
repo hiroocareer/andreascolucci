@@ -39,7 +39,7 @@ const HeroSection = () => {
             {t(h.cta_primary)}
             <ArrowRight className="w-4 h-4" />
           </Link>
-          <a href="https://www.linkedin.com/in/andreascolucci" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] border border-foreground text-foreground px-8 py-4 hover:bg-foreground hover:text-background transition-colors">
+          <a href="https://www.linkedin.com/in/andreascolucci/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] border border-foreground text-foreground px-8 py-4 hover:bg-foreground hover:text-background transition-colors">
             LinkedIn
             <ArrowRight className="w-4 h-4" />
           </a>
