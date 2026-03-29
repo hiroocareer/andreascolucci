@@ -6,7 +6,7 @@ import {
 } from "react-simple-maps";
 import { motion } from "framer-motion";
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
 
 // ISO 3166-1 numeric codes for the countries
 const HIGHLIGHTED_COUNTRIES = new Set([
