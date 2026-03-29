@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
-import { X } from "lucide-react";
 
 interface CaseStudyCardProps {
   number: string;
