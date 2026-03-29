@@ -42,7 +42,7 @@ const LogoStripSection = () => {
       <div className="flex animate-logo-scroll group-hover:[animation-play-state:paused]">
           {allLogos.map((logo, index) => (
             <div key={`${logo.alt}-${index}`} className="flex-shrink-0 flex items-center justify-center px-8 md:px-12">
-              <img src={logo.src} alt={logo.alt} loading="lazy" className="h-12 md:h-16 w-auto object-contain grayscale brightness-0 opacity-60 hover:opacity-100 transition-all duration-500" />
+              <img src={logo.src} alt={logo.alt} loading="lazy" className={`h-12 md:h-16 w-auto object-contain transition-all duration-500 ${logo.className}`} />
             </div>
           ))}
         </div>
