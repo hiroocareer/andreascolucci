@@ -5,7 +5,7 @@ import logoUltra from "@/assets/logos/ultra.png";
 import logoF1 from "@/assets/logos/f1.png";
 import logoElrow from "@/assets/logos/elrow.png";
 import logoSonar from "@/assets/logos/sonar.png";
-import logoKappaFutur from "@/assets/logos/kappa-futur.png";
+import logoKappaFutur from "@/assets/logos/kappa-futur.svg";
 import logoMotogp from "@/assets/logos/motogp.png";
 import logoCampovolo from "@/assets/logos/campovolo.png";
 import logoMonegros from "@/assets/logos/monegros.png";
