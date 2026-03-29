@@ -362,7 +362,7 @@ export const translations = {
         },
       },
       {
-        number: "05",
+        number: "06",
         title: {
           en: "MotoGP Catalunya — Hospitality & F&B Area",
           it: "MotoGP Catalunya — Area Hospitality & F&B",
