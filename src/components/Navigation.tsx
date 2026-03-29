@@ -53,7 +53,7 @@ const Navigation = () => {
             className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors"
             onClick={closeMenu}
           >
-            Andreas Colucci
+            Andreas Colucci - Event Tech & Operations Consultant
           </Link>
           
           {/* Desktop Navigation */}
