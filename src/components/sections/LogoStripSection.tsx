@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "@/i18n/useTranslation";
 
 import logoUltra from "@/assets/logos/ultra.png";
 import logoF1 from "@/assets/logos/f1.png";
@@ -21,46 +22,27 @@ const logos = [
 ];
 
 const LogoStripSection = () => {
-  // Double the logos for seamless infinite scroll
+  const { t, translations } = useTranslation();
   const allLogos = [...logos, ...logos];
 
   return (
     <section className="py-20 md:py-28 border-t border-border overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">
-            Environments
+            {t(translations.logoStrip.label)}
           </span>
           <h2 className="heading-display text-2xl md:text-3xl">
-            Where I've Operated
+            {t(translations.logoStrip.title)}
           </h2>
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="relative group"
-      >
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="relative group">
         <div className="flex animate-logo-scroll group-hover:[animation-play-state:paused]">
           {allLogos.map((logo, index) => (
-            <div
-              key={`${logo.alt}-${index}`}
-              className="flex-shrink-0 flex items-center justify-center px-8 md:px-12"
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-                className="h-20 md:h-32 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-              />
+            <div key={`${logo.alt}-${index}`} className="flex-shrink-0 flex items-center justify-center px-8 md:px-12">
+              <img src={logo.src} alt={logo.alt} loading="lazy" className="h-20 md:h-32 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
             </div>
           ))}
         </div>

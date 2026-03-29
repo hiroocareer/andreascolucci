@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import { useTranslation } from "@/i18n/useTranslation";
 
 import caseMonegros from "@/assets/monegros-new.jpg";
 import caseCampovolo from "@/assets/case-campovolo.jpg";
@@ -11,106 +12,44 @@ import caseMotogp from "@/assets/case-motogp.jpg";
 import caseOlimpico from "@/assets/case-olimpico.jpg";
 import caseSonar from "@/assets/sonar-new.png";
 
-const caseStudies = [
-  {
-    number: "01",
-    title: "Campovolo — Ligabue 'La Notte di Certe Notti'",
-    highlight: "110,000 attendees",
-    context: "One of the largest concerts in Italy, with zero margin for error.",
-    details: ["110,000 attendees", "Stadium-scale concert", "Zero margin for error"],
-    role: "Operational systems oversight — payment systems, access control, and crowd flow management at maximum capacity.",
-    outcome: "Seamless execution at full capacity. All systems performed without interruption across the entire event cycle. No operational failures recorded.",
-    image: caseCampovolo,
-  },
-  {
-    number: "02",
-    title: "Monegros Desert Festival",
-    highlight: "70,000 attendees — 22 hours",
-    context: "A 22-hour continuous event in a remote, high-complexity environment.",
-    details: ["70,000 attendees", "22-hour continuous event", "Distributed logistics across desert terrain"],
-    role: "End-to-end operational coordination across distributed stages, services, and vendor systems. Full control over logistics in an environment where infrastructure is temporary and conditions are extreme.",
-    outcome: "Operations remained stable throughout the full 22-hour cycle with no critical disruptions. Coordination held under extreme environmental and logistical pressure.",
-    image: caseMonegros,
-  },
-  {
-    number: "03",
-    title: "Sónar Festival Barcelona",
-    highlight: "4 days — multi-venue — near 24h — 160,000 total",
-    context: "Four days of near-continuous operations across multiple venues with 160,000 total attendees.",
-    details: ["4 days", "Multiple venues", "Near 24-hour operations", "160,000 attendees total"],
-    role: "Operational coordination across multiple venues and near-continuous scheduling. Systems management, crowd flow, and real-time issue resolution at scale.",
-    outcome: "Uninterrupted operations across four days and multiple venues. All critical systems maintained full performance. No operational disruptions despite scale and complexity.",
-    image: caseSonar,
-    imageFit: "contain" as const,
-  },
-  {
-    number: "04",
-    title: "elrow Town Madrid",
-    highlight: "33,000 attendees/day — 2 days",
-    context: "Two consecutive days of high-density operations with 33,000 attendees per day.",
-    details: ["33,000 attendees per day", "2 consecutive days", "High-density festival environment"],
-    role: "Onsite operations lead. Real-time decision-making across high-density zones, vendor coordination, and crowd flow control under sustained pressure.",
-    outcome: "Controlled, stable environment maintained across both days despite extreme density conditions. No escalations or critical incidents.",
-    image: caseElrow,
-  },
-  {
-    number: "05",
-    title: "MotoGP Catalunya — Hospitality & F&B Area",
-    highlight: "High-volume F&B — premium hospitality",
-    context: "Premium hospitality operations under high-volume conditions at the Montmeló circuit.",
-    details: ["High-volume F&B operations", "Premium hospitality environment", "Montmeló circuit"],
-    role: "Operational management of hospitality and food & beverage areas. Payment system deployment and vendor coordination under premium service expectations.",
-    outcome: "Premium service standards maintained under high-volume conditions. Payment and service flow operated without interruption.",
-    image: caseMotogp,
-  },
-  {
-    number: "06",
-    title: "Stadio Olimpico — Football Season",
-    highlight: "Full season — recurring operations",
-    context: "Recurring high-volume operations across an entire football season.",
-    details: ["Recurring high-volume operations", "Payment system implementation", "F&B vendor integration"],
-    role: "Implementation and management of cashless payment systems integrated with F&B vendor operations. Built a repeatable operational framework for match days.",
-    outcome: "Reliable, consistent operational framework delivering stable results across the full season. Systems held under recurring high-pressure conditions.",
-    image: caseOlimpico,
-  },
-];
+const images = [caseCampovolo, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
+const imageFits: (("cover" | "contain") | undefined)[] = [undefined, undefined, "contain", undefined, undefined, undefined];
 
 const CaseStudiesSection = () => {
+  const { t, language, translations } = useTranslation();
+  const { lang } = useParams<{ lang: string }>();
+  const cs = translations.caseStudies;
+
   return (
     <section className="py-28 md:py-36 px-4 md:px-6 border-t border-border">
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="label-text block mb-4">Selected work</span>
-          <h2 className="heading-display text-3xl md:text-5xl">Case Studies</h2>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="mb-20">
+          <span className="label-text block mb-4">{t(cs.label)}</span>
+          <h2 className="heading-display text-3xl md:text-5xl">{t(cs.title)}</h2>
         </motion.div>
 
         <div>
-          {caseStudies.map((study, index) => (
-            <CaseStudyCard key={study.number} {...study} index={index} />
+          {cs.cases.map((study, index) => (
+            <CaseStudyCard
+              key={study.number}
+              number={study.number}
+              title={t(study.title)}
+              highlight={t(study.highlight)}
+              context={t(study.context)}
+              details={study.details[language]}
+              role={t(study.role)}
+              outcome={t(study.outcome)}
+              image={images[index]}
+              index={index}
+              imageFit={imageFits[index]}
+            />
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-16 pt-10 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
-        >
-          <p className="text-base md:text-lg text-foreground">
-            Working on something similar? Let's talk.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] bg-foreground text-background px-8 py-4 hover:bg-foreground/90 transition-colors self-start"
-          >
-            Start a conversation
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="mt-16 pt-10 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <p className="text-base md:text-lg text-foreground">{t(cs.cta_text)}</p>
+          <Link to={`/${lang || "en"}/contact`} className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.15em] bg-foreground text-background px-8 py-4 hover:bg-foreground/90 transition-colors self-start">
+            {t(cs.cta_button)}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
