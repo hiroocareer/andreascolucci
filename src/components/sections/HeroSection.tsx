@@ -47,8 +47,8 @@ const HeroSection = () => {
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.7 }} className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
           <p className="text-sm text-muted-foreground">{t(h.availability)}</p>
-          <a href="mailto:andreas.colucci@icloud.com" className="text-sm text-foreground hover:text-muted-foreground transition-colors story-link">
-            andreas.colucci@icloud.com
+          <a href="mailto:hello@andreascolucci.com" className="text-sm text-foreground hover:text-muted-foreground transition-colors story-link">
+            hello@andreascolucci.com
           </a>
         </motion.div>
       </div>

@@ -26,7 +26,7 @@ const Contact = () => {
             <div className="space-y-10">
               <div>
                 <span className="label-text block mb-3">{t(cs.email_label)}</span>
-                <a href="mailto:info@eventoperations.com" className="text-foreground hover:text-muted-foreground transition-colors story-link">info@eventoperations.com</a>
+                <a href="mailto:hello@andreascolucci.com" className="text-foreground hover:text-muted-foreground transition-colors story-link">hello@andreascolucci.com</a>
               </div>
               <div>
                 <span className="label-text block mb-3">{t(cs.linkedin_label)}</span>
