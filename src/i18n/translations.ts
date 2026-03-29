@@ -395,7 +395,7 @@ export const translations = {
         },
       },
       {
-        number: "06",
+        number: "07",
         title: {
           en: "Stadio Olimpico — Football Season",
           it: "Stadio Olimpico — Stagione calcistica",
