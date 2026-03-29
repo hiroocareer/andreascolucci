@@ -566,6 +566,7 @@ export const translations = {
 
   // Contact Form
   contactForm: {
+    intro: { en: "Tell me about your event. I'll get back to you within 48 hours.", it: "Raccontami del tuo evento. Ti rispondo entro 48 ore.", es: "Cuéntame sobre tu evento. Te respondo en menos de 48 horas." },
     name_label: { en: "Name", it: "Nome", es: "Nombre" },
     name_placeholder: { en: "Your name", it: "Il tuo nome", es: "Tu nombre" },
     email_label: { en: "Email", it: "Email", es: "Email" },
