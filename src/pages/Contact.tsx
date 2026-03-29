@@ -4,6 +4,7 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { useSEO } from "@/hooks/useSEO";
 
 const Contact = () => {
+  useSEO();
   const { t, translations } = useTranslation();
   const c = translations.contactPage;
   const cs = translations.contactSection;

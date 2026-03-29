@@ -17,6 +17,7 @@ const images = [caseCampovolo, caseMonegros, caseSonar, caseElrow, caseMotogp, c
 const workPageCaseIndices = [1, 0, 3, -1, 4, 5, 2]; // -1 = Dimensions (not in homepage translations)
 
 const Work = () => {
+  useSEO();
   const { t, language, translations } = useTranslation();
   const w = translations.workPage;
   const cs = translations.caseStudies;
