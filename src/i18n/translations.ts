@@ -119,6 +119,11 @@ export const translations = {
           it: "Leadership operativa per eventi su larga scala dove affidabilità, coordinamento e controllo non sono negoziabili.",
           es: "Liderazgo operativo para eventos a gran escala donde la fiabilidad, la coordinación y el control no son negociables.",
         },
+        closing: {
+          en: "I take responsibility for operations when reliability is non-negotiable.",
+          it: "Mi assumo la responsabilità delle operazioni quando l'affidabilità non è negoziabile.",
+          es: "Asumo la responsabilidad de las operaciones cuando la fiabilidad no es negociable.",
+        },
       },
       {
         title: {
@@ -130,6 +135,11 @@ export const translations = {
           en: "Real-time operational presence during events. I manage issues as they happen, take decisions under pressure, and maintain stability when things move fast.",
           it: "Presenza operativa in tempo reale durante gli eventi. Gestisco i problemi nel momento in cui si verificano, prendo decisioni sotto pressione e mantengo la stabilità quando tutto si muove velocemente.",
           es: "Presencia operativa en tiempo real durante eventos. Gestiono problemas en el momento, tomo decisiones bajo presión y mantengo la estabilidad cuando todo se mueve rápido.",
+        },
+        closing: {
+          en: "I make decisions in real time to keep operations under control.",
+          it: "Prendo decisioni in tempo reale per mantenere le operazioni sotto controllo.",
+          es: "Tomo decisiones en tiempo real para mantener las operaciones bajo control.",
         },
       },
       {
