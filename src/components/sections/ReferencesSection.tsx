@@ -22,7 +22,7 @@ const ReferencesSection = () => {
               <blockquote className="text-lg md:text-xl leading-relaxed text-foreground mb-8 -mt-4">{t(ref.quote)}</blockquote>
               <div className="border-t border-border pt-4">
                 <p className="font-semibold text-foreground">{ref.name}</p>
-                <p className="text-sm text-muted-foreground">{t(ref.role)}, {ref.company}</p>
+                <p className="text-sm text-muted-foreground">{t(ref.role)}</p>
               </div>
             </motion.div>
           ))}
