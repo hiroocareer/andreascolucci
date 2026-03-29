@@ -49,8 +49,11 @@ const WorldMap = memo(() => {
           scale: 120,
           center: [20, 20],
         }}
+        width={800}
+        height={600}
         className="w-full h-auto"
         style={{ maxHeight: "480px" }}
+        viewBox="0 40 800 420"
       >
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
