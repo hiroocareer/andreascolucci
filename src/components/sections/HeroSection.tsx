@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 
 const HeroSection = () => {
