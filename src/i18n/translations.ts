@@ -11,7 +11,7 @@ export const translations = {
 
   // Hero
   hero: {
-    name: { en: "Andreas Colucci", it: "Andreas Colucci", es: "Andreas Colucci" },
+    name: { en: "", it: "", es: "" },
     headline1: { en: "When operations break,", it: "Quando le operazioni saltano,", es: "Cuando las operaciones fallan," },
     headline2: { en: "I take control.", it: "prendo il controllo.", es: "tomo el control." },
     subtitle: {
