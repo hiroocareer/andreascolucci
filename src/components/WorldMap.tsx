@@ -32,6 +32,7 @@ const HIGHLIGHTED_COUNTRIES = new Set([
   "528", // Netherlands
   "020", // Andorra
   "484", // Mexico
+  "504", // Morocco
 ]);
 
 const WorldMap = memo(() => {
