@@ -85,7 +85,7 @@ export const translations = {
 
   // Logo Strip
   logoStrip: {
-    label: { en: "Environments", it: "Ambienti", es: "Entornos" },
+    label: { en: "Operational Contexts", it: "Contesti Operativi", es: "Contextos Operativos" },
     title: { en: "Where I've Operated", it: "Dove ho operato", es: "Donde he operado" },
   },
 
