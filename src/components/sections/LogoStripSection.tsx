@@ -39,7 +39,7 @@ const LogoStripSection = () => {
       </div>
 
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="relative group">
-      <div className="flex animate-logo-scroll group-hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-logo-scroll group-hover:[animation-play-state:paused]">
           {allLogos.map((logo, index) => (
             <div key={`${logo.alt}-${index}`} className="flex-shrink-0 flex items-center justify-center px-8 md:px-12">
               <img src={logo.src} alt={logo.alt} loading="lazy" className={`h-12 md:h-16 w-auto object-contain transition-all duration-500 ${logo.className}`} />
