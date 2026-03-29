@@ -19,9 +19,9 @@ const pageMeta: Record<string, PageMeta> = {
       es: "Andreas Colucci — Operaciones para Eventos de Alta Complejidad",
     },
     description: {
-      en: "Event operations, real-time control, and systems management for large-scale events. Trusted in complex, high-pressure environments.",
-      it: "Operazioni per eventi, controllo in tempo reale e gestione sistemi per eventi su larga scala. Affidabilità comprovata in ambienti complessi e ad alta pressione.",
-      es: "Operaciones para eventos, control en tiempo real y gestión de sistemas para eventos a gran escala. Confianza demostrada en entornos complejos y de alta presión.",
+      en: "Senior event operations for large-scale, high-pressure environments. 300+ events across 20+ countries. When execution cannot fail.",
+      it: "Event operations senior per ambienti ad alta pressione e larga scala. 300+ eventi in oltre 20 paesi. Quando l'esecuzione non può fallire.",
+      es: "Operaciones senior para eventos de gran escala y alta presión. 300+ eventos en más de 20 países. Cuando la ejecución no puede fallar.",
     },
     ogDescription: {
       en: "Real-time operations, systems, and execution for large-scale events.",
@@ -36,9 +36,9 @@ const pageMeta: Record<string, PageMeta> = {
       es: "Trabajos Seleccionados — Andreas Colucci",
     },
     description: {
-      en: "Case studies from large-scale events where real-time operations and systems control were critical. 300+ events across 20+ countries.",
-      it: "Case studies da eventi su larga scala dove operazioni in tempo reale e controllo sistemi erano critici. 300+ eventi in oltre 20 paesi.",
-      es: "Casos de estudio de eventos a gran escala donde las operaciones en tiempo real y el control de sistemas fueron críticos. 300+ eventos en más de 20 países.",
+      en: "Case studies from large-scale events: Campovolo, Kappa FuturFestival, Sónar, Monegros, elrow, MotoGP. Operations at 110,000+ attendees.",
+      it: "Case studies da eventi su larga scala: Campovolo, Kappa FuturFestival, Sónar, Monegros, elrow, MotoGP. Operazioni per oltre 110.000 partecipanti.",
+      es: "Casos de estudio de eventos a gran escala: Campovolo, Kappa FuturFestival, Sónar, Monegros, elrow, MotoGP. Operaciones con más de 110.000 asistentes.",
     },
   },
   about: {
@@ -48,9 +48,9 @@ const pageMeta: Record<string, PageMeta> = {
       es: "Sobre Mí — Andreas Colucci",
     },
     description: {
-      en: "10 years operating in high-complexity event environments. From festivals to stadiums, cashless systems to access control, across 20+ countries.",
-      it: "10 anni di operatività in ambienti ad alta complessità. Dai festival agli stadi, sistemi cashless e controllo accessi, in oltre 20 paesi.",
-      es: "10 años operando en entornos de alta complejidad. De festivales a estadios, sistemas cashless y control de acceso, en más de 20 países.",
+      en: "Andreas Colucci — event operations consultant. 10+ years in high-pressure festival and stadium environments across 20+ countries.",
+      it: "Andreas Colucci — consulente operativo per eventi. 10+ anni in ambienti ad alta pressione tra festival e stadi in oltre 20 paesi.",
+      es: "Andreas Colucci — consultor de operaciones para eventos. 10+ años en entornos de alta presión en festivales y estadios en más de 20 países.",
     },
   },
   contact: {
@@ -60,9 +60,9 @@ const pageMeta: Record<string, PageMeta> = {
       es: "Contacto — Andreas Colucci",
     },
     description: {
-      en: "Get in touch for large-scale event operations, systems management, and real-time execution in high-pressure environments.",
-      it: "Contattami per operazioni su larga scala, gestione sistemi ed esecuzione in tempo reale in ambienti ad alta pressione.",
-      es: "Contáctame para operaciones a gran escala, gestión de sistemas y ejecución en tiempo real en entornos de alta presión.",
+      en: "Working on a complex event? Get in touch to discuss operational consulting, onsite management, and critical systems oversight.",
+      it: "Stai lavorando a un evento complesso? Contattami per consulenza operativa, gestione onsite e supervisione di sistemi critici.",
+      es: "¿Trabajas en un evento complejo? Escríbeme para hablar de consultoría operativa, gestión onsite y supervisión de sistemas críticos.",
     },
   },
 };
