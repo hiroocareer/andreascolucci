@@ -9,7 +9,7 @@ import caseCampovolo from "@/assets/events/campovolo.webp";
 import caseElrow from "@/assets/case-elrow.jpg";
 import caseDimensions from "@/assets/case-dimensions.jpg";
 import caseMotogp from "@/assets/case-motogp.jpg";
-import caseOlimpico from "@/assets/case-olimpico.jpg";
+import caseOlimpico from "@/assets/events/olimpico.jpg";
 import caseSonar from "@/assets/sonar-new.png";
 
 const images = [caseCampovolo, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
