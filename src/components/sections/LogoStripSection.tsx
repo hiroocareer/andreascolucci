@@ -10,10 +10,9 @@ import logoMotogp from "@/assets/logos/motogp.png";
 import logoCampovolo from "@/assets/logos/campovolo.png";
 import logoMonegros from "@/assets/logos/monegros.png";
 import logoOlimpico from "@/assets/logos/stadio-olimpico.webp";
-import logoMovement from "@/assets/logos/movement-detroit.jpg";
+import logoMovement from "@/assets/logos/movement-detroit-transparent.png";
 
 const baseClass = "brightness-0 opacity-60 hover:opacity-100";
-const invertClass = "invert opacity-70 hover:opacity-100";
 
 const logos = [
   { src: logoUltra, alt: "Ultra Music Festival", className: baseClass },
@@ -25,7 +24,7 @@ const logos = [
   { src: logoCampovolo, alt: "Campovolo", className: baseClass },
   { src: logoMonegros, alt: "Monegros Desert Festival", className: baseClass },
   { src: logoOlimpico, alt: "Stadio Olimpico", className: baseClass },
-  { src: logoMovement, alt: "Movement", className: invertClass },
+  { src: logoMovement, alt: "Movement", className: baseClass },
 ];
 
 const LogoStripSection = () => {
