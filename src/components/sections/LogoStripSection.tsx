@@ -9,17 +9,9 @@ import logoKappaFutur from "@/assets/logos/kappa-futur.svg";
 import logoMotogp from "@/assets/logos/motogp.png";
 import logoCampovolo from "@/assets/logos/campovolo.png";
 import logoMonegros from "@/assets/logos/monegros.png";
-import logoRobot from "@/assets/logos/robot-festival.webp";
 import logoOlimpico from "@/assets/logos/stadio-olimpico.webp";
-import logoMovement from "@/assets/logos/movement.jpg";
-import logoOutlook from "@/assets/logos/outlook.png";
-import logoDimensions from "@/assets/logos/dimensions.png";
-import logoFabrik from "@/assets/logos/fabrik.jpeg";
-import logoRotary from "@/assets/logos/rotary.png";
-import logoSpringAttitude from "@/assets/logos/spring-attitude.webp";
 
 const baseClass = "brightness-0 opacity-60 hover:opacity-100";
-const invertClass = "invert brightness-0 opacity-60 hover:opacity-100";
 
 const logos = [
   { src: logoUltra, alt: "Ultra Music Festival", className: baseClass },
@@ -30,14 +22,7 @@ const logos = [
   { src: logoMotogp, alt: "MotoGP", className: baseClass },
   { src: logoCampovolo, alt: "Campovolo", className: baseClass },
   { src: logoMonegros, alt: "Monegros Desert Festival", className: baseClass },
-  { src: logoRobot, alt: "Robot Festival", className: baseClass },
   { src: logoOlimpico, alt: "Stadio Olimpico", className: baseClass },
-  { src: logoMovement, alt: "Movement", className: baseClass },
-  { src: logoOutlook, alt: "Outlook Festival", className: invertClass },
-  { src: logoDimensions, alt: "Dimensions Festival", className: invertClass },
-  { src: logoFabrik, alt: "Fabrik Madrid", className: invertClass },
-  { src: logoRotary, alt: "Rotary International", className: baseClass },
-  { src: logoSpringAttitude, alt: "Spring Attitude", className: invertClass },
 ];
 
 const LogoStripSection = () => {
