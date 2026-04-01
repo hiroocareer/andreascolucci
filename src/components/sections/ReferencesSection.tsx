@@ -7,7 +7,7 @@ const ReferencesSection = () => {
 
   return (
     <section className="py-32 px-4 md:px-6 bg-background">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">{t(r.label)}</span>
           <h2 className="heading-display text-3xl md:text-5xl leading-[1]">{t(r.title)}</h2>
