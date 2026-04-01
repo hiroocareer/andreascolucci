@@ -17,13 +17,13 @@ const ImpactSection = () => {
           {imp.stats.map((stat, index) => (
             <motion.div key={stat.value} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8">
               <p className="heading-display text-4xl md:text-6xl lg:text-7xl mb-4">{stat.value}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{t(stat.label)}</p>
+              <p className="text-base text-muted-foreground leading-relaxed">{t(stat.label)}</p>
             </motion.div>
           ))}
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className="mt-20 pt-10 border-t border-border max-w-3xl">
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground">
+          <p className="text-lg md:text-xl font-light leading-relaxed text-foreground">
             {t(imp.statement1)}
             <br />
             <span className="text-muted-foreground">{t(imp.statement2)}</span>

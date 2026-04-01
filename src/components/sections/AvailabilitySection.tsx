@@ -11,7 +11,7 @@ const AvailabilitySection = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <span className="label-text block mb-8">{t(a.label)}</span>
           <h2 className="heading-display text-3xl md:text-5xl mb-6">{t(a.title)}</h2>
-          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground font-medium">{t(a.subtitle)}</p>
+          <p className="text-base uppercase tracking-[0.2em] text-muted-foreground font-medium">{t(a.subtitle)}</p>
         </motion.div>
       </div>
     </section>

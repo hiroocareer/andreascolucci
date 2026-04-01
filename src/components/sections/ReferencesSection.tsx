@@ -10,7 +10,7 @@ const ReferencesSection = () => {
       <div className="container mx-auto max-w-6xl">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">{t(r.label)}</span>
-          <h2 className="heading-display text-[clamp(2rem,5vw,4rem)] leading-[1]">{t(r.title)}</h2>
+          <h2 className="heading-display text-3xl md:text-5xl leading-[1]">{t(r.title)}</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -19,10 +19,10 @@ const ReferencesSection = () => {
               <div className="mb-6">
                 <span className="text-6xl leading-none text-muted-foreground/20 font-serif select-none">"</span>
               </div>
-              <blockquote className="text-lg md:text-xl leading-relaxed text-foreground mb-8 -mt-4">{t(ref.quote)}</blockquote>
+              <blockquote className="text-base md:text-lg leading-relaxed text-foreground mb-8 -mt-4">{t(ref.quote)}</blockquote>
               <div className="border-t border-border pt-4">
                 <p className="font-semibold text-foreground">{ref.name}</p>
-                <p className="text-sm text-muted-foreground">{t(ref.role)}</p>
+                <p className="text-base text-muted-foreground">{t(ref.role)}</p>
               </div>
             </motion.div>
           ))}
