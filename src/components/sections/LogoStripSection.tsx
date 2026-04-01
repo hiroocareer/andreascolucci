@@ -38,7 +38,7 @@ const LogoStripSection = () => {
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">
             {t(translations.logoStrip.label)}
           </span>
-          <h2 className="heading-display text-2xl md:text-3xl">
+          <h2 className="heading-display text-3xl md:text-5xl">
             {t(translations.logoStrip.title)}
           </h2>
         </motion.div>

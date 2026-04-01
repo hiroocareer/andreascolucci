@@ -14,7 +14,7 @@ const AboutSection = () => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }} className="max-w-2xl space-y-8">
-          <p className="text-lg md:text-xl text-foreground leading-relaxed font-medium">{t(a.intro)}</p>
+          <p className="text-base md:text-lg text-foreground leading-relaxed font-medium">{t(a.intro)}</p>
           <p className="text-base md:text-lg text-foreground leading-relaxed">{t(a.body1)}</p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t(a.body2)}</p>
         </motion.div>
