@@ -68,9 +68,9 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
             <p className="text-base text-foreground font-medium mb-6 leading-relaxed italic">
               {context}
             </p>
-            <ul className="space-y-1.5">
+              <ul className="space-y-2">
               {details.map((detail, i) => (
-                <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <li key={i} className="text-base md:text-lg text-muted-foreground flex items-start gap-2">
                   <span className="w-1 h-1 bg-muted-foreground rounded-full mt-1.5 shrink-0" />
                   {detail}
                 </li>
@@ -81,11 +81,11 @@ const CaseStudyCard = ({ number, title, highlight, context, details, role, outco
           <div className={`${isReversed ? 'md:col-start-1 md:col-span-5 md:row-start-1' : 'md:col-start-7 md:col-span-6'} space-y-8`} style={{ direction: 'ltr' }}>
             <div>
               <span className="label-text block mb-2">{t(cs.role_label)}</span>
-              <p className="text-sm text-foreground leading-relaxed">{role}</p>
+                <p className="text-base md:text-lg text-foreground leading-relaxed">{role}</p>
             </div>
             <div>
               <span className="label-text block mb-2">{t(cs.outcome_label)}</span>
-              <p className="text-sm text-foreground leading-relaxed">{outcome}</p>
+                <p className="text-base md:text-lg text-foreground leading-relaxed">{outcome}</p>
             </div>
           </div>
         </div>
