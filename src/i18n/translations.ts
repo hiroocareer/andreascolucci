@@ -591,7 +591,7 @@ export const translations = {
   footer: {
     navigation: { en: "Navigation", it: "Navigazione", es: "Navegación" },
     contact: { en: "Contact", it: "Contatto", es: "Contacto" },
-    connect: { en: "Connect", it: "Collegamento", es: "Conexión" },
+    connect: { en: "Connect", it: "Seguimi", es: "Sigueme" },
     work_with_me: { en: "Work\nwith me", it: "Lavoriamo\ninsieme", es: "Trabajemos\njuntos" },
     copyright: { en: "All rights reserved.", it: "Tutti i diritti riservati.", es: "Todos los derechos reservados." },
     tagline: { en: "Senior Event Operations", it: "Senior Event Operations", es: "Senior Event Operations" },
