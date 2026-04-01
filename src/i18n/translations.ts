@@ -439,6 +439,15 @@ export const translations = {
     items: [
       {
         quote: {
+          en: "Andreas has been a consistent presence in large-scale event operations at Kappa FuturFestival since 2015. His reliability, technical competence, and ability to operate effectively in high-pressure environments make a tangible difference on the ground.",
+          it: "Andreas è una presenza costante nelle operazioni di grandi eventi di Kappa FuturFestival dal 2015. La sua affidabilità, competenza tecnica e capacità di operare efficacemente in contesti ad alta pressione fanno concretamente la differenza sul campo.",
+          es: "Andreas ha sido una presencia constante en las operaciones de grandes eventos de Kappa FuturFestival desde 2015. Su fiabilidad, competencia técnica y capacidad para operar eficazmente en entornos de alta presión marcan una diferencia tangible sobre el terreno.",
+        },
+        name: "Gian Luca Brignone",
+        role: { en: "Co Founder, Kappa Futur Festival", it: "Co Founder, Kappa Futur Festival", es: "Co Founder, Kappa Futur Festival" },
+      },
+      {
+        quote: {
           en: "Andreas combines strong operational expertise with the ability to handle complex event environments reliably. He's someone you can trust when execution really matters.",
           it: "Andreas unisce una solida competenza operativa con la capacità di gestire ambienti eventi complessi in modo affidabile. È una persona di cui ti puoi fidare quando l'esecuzione conta davvero.",
           es: "Andreas combina una sólida experiencia operativa con la capacidad de gestionar entornos de eventos complejos de manera fiable. Es alguien en quien puedes confiar cuando la ejecución realmente importa.",
