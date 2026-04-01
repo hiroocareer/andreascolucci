@@ -464,15 +464,6 @@ export const translations = {
         name: "Renzo Puccini",
         role: { en: "Head of Ticketing & Cashless, elrow", it: "Head of Ticketing & Cashless, elrow", es: "Head of Ticketing & Cashless, elrow" },
       },
-      {
-        quote: {
-          en: "Andreas has deep expertise in RFID and cashless systems and is able to operate effectively in complex, high-pressure event environments. I would rely on him for large-scale operations.",
-          it: "Andreas ha una profonda competenza nei sistemi RFID e cashless ed è in grado di operare efficacemente in ambienti eventi complessi e ad alta pressione. Mi affiderei a lui per operazioni su larga scala.",
-          es: "Andreas tiene una profunda experiencia en sistemas RFID y cashless y es capaz de operar eficazmente en entornos de eventos complejos y de alta presión. Confiaría en él para operaciones a gran escala.",
-        },
-        name: "Carlos Martínez Borrell",
-        role: { en: "Head of Operations, Tappit", it: "Head of Operations, Tappit", es: "Head of Operations, Tappit" },
-      },
     ],
   },
 
