@@ -440,7 +440,7 @@ export const translations = {
       {
         quote: {
           en: "Andreas has been a consistent presence in large-scale event operations at Kappa FuturFestival since 2015. His reliability, technical competence, and ability to operate effectively in high-pressure environments make a tangible difference on the ground.",
-          it: "Andreas è una presenza costante nelle operazioni di grandi eventi di Kappa FuturFestival dal 2015. La sua affidabilità, competenza tecnica e capacità di operare efficacemente in contesti ad alta pressione fanno concretamente la differenza sul campo.",
+          it: "Andreas è una presenza costante nelle operazioni di grandi scala di Kappa FuturFestival dal 2015. La sua affidabilità, competenza tecnica e capacità di operare efficacemente in contesti ad alta pressione fanno concretamente la differenza sul campo.",
           es: "Andreas ha sido una presencia constante en las operaciones de grandes eventos de Kappa FuturFestival desde 2015. Su fiabilidad, competencia técnica y capacidad para operar eficazmente en entornos de alta presión marcan una diferencia tangible sobre el terreno.",
         },
         name: "Gian Luca Brignone",
