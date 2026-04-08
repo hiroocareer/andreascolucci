@@ -457,12 +457,12 @@ export const translations = {
       },
       {
         quote: {
-          en: "Andreas managed cashless operations end-to-end with precision and strong attention to detail, ensuring a smooth and reliable experience. He consistently demonstrated control, professionalism, and accountability.",
-          it: "Andreas ha gestito le operazioni cashless end-to-end con precisione e forte attenzione ai dettagli, garantendo un'esperienza fluida e affidabile. Ha costantemente dimostrato controllo, professionalità e responsabilità.",
-          es: "Andreas gestionó las operaciones cashless de principio a fin con precisión y gran atención al detalle, asegurando una experiencia fluida y fiable. Demostró constantemente control, profesionalidad y responsabilidad.",
+          en: "Andreas has always demonstrated great operational capability, managing tasks with organisation, speed, and attention to detail during Monegros Desert Festival operations. He stood out for his reliability and commitment: when something was in his hands, you knew it would be resolved correctly and on time, even during the most demanding moments.",
+          it: "Andreas ha sempre dimostrato una grande capacità operativa, gestendo le attività con organizzazione, rapidità e attenzione al dettaglio durante le operazioni del Monegros Desert Festival. Si è distinto per la sua affidabilità e il suo impegno: quando qualcosa era nelle sue mani, sapevi che sarebbe stato risolto correttamente e in tempo, anche nei momenti di maggior carico di lavoro.",
+          es: "Andreas ha siempre demostrado una gran capacidad operativa, gestionando las tareas con organización, rapidez y atención al detalle durante las operaciones del Monegros Desert Festival. Destacó por su fiabilidad y compromiso: cuando algo quedaba en sus manos, sabía que se iba a resolver correctamente y a tiempo, incluso en momentos de mayor carga de trabajo.",
         },
-        name: "Renzo Puccini",
-        role: { en: "Head of Ticketing & Cashless, elrow", it: "Head of Ticketing & Cashless, elrow", es: "Head of Ticketing & Cashless, elrow" },
+        name: "Joaquín Cabos",
+        role: { en: "Director, Monegros Desert Festival", it: "Director, Monegros Desert Festival", es: "Director, Monegros Desert Festival" },
       },
     ],
   },
