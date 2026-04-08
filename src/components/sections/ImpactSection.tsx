@@ -13,7 +13,7 @@ const ImpactSection = () => {
           <h2 className="heading-display text-3xl md:text-5xl">{t(imp.title)}</h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {imp.stats.map((stat, index) => (
             <motion.div key={stat.value} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8">
               <p className="heading-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4">{stat.value}</p>

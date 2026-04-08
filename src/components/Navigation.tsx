@@ -50,11 +50,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link 
             to={`/${currentLang}`} 
-            className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors truncate max-w-[180px] sm:max-w-none"
+            className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors truncate max-w-[180px] lg:max-w-none"
             onClick={closeMenu}
           >
-            <span className="hidden sm:inline">Andreas Colucci - Event Tech & Operations Consultant</span>
-            <span className="sm:hidden">Andreas Colucci</span>
+            <span className="hidden lg:inline">Andreas Colucci - Event Tech & Operations Consultant</span>
+            <span className="lg:hidden">Andreas Colucci</span>
           </Link>
           
           {/* Desktop Navigation */}
