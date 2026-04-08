@@ -6,7 +6,7 @@ const ReferencesSection = () => {
   const r = translations.references;
 
   return (
-    <section className="py-32 px-4 md:px-6 bg-background">
+    <section className="py-28 md:py-36 px-4 md:px-6 bg-background border-t border-border">
       <div className="container mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="mb-20">
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">{t(r.label)}</span>
