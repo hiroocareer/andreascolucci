@@ -452,8 +452,8 @@ export const translations = {
           it: "Andreas unisce una solida competenza operativa con la capacità di gestire ambienti eventi complessi in modo affidabile. È una persona di cui ti puoi fidare quando l'esecuzione conta davvero.",
           es: "Andreas combina una sólida experiencia operativa con la capacidad de gestionar entornos de eventos complejos de manera fiable. Es alguien en quien puedes confiar cuando la ejecución realmente importa.",
         },
-        name: "Pol Torà Mañós",
-        role: { en: "Head of Client Services, Howler", it: "Head of Client Services, Howler", es: "Head of Client Services, Howler" },
+        name: "Juan Arnau",
+        role: { en: "Founder, elrow", it: "Founder, elrow", es: "Founder, elrow" },
       },
       {
         quote: {
