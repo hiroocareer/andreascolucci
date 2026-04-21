@@ -18,13 +18,11 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const id = crypto.randomUUID();
-      const { error } = await supabase.functions.invoke("send-transactional-email", {
+      const { error } = await supabase.functions.invoke("notify-contact", {
         body: {
-          templateName: "contact-confirmation",
-          recipientEmail: formData.email,
-          idempotencyKey: `contact-confirm-${id}`,
-          templateData: { name: formData.name, message: formData.message },
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
         },
       });
 
