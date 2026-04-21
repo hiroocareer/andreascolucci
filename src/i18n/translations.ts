@@ -448,12 +448,12 @@ export const translations = {
       },
       {
         quote: {
-          en: "Andreas combines strong operational expertise with the ability to handle complex event environments reliably. He's someone you can trust when execution really matters.",
-          it: "Andreas unisce una solida competenza operativa con la capacità di gestire ambienti eventi complessi in modo affidabile. È una persona di cui ti puoi fidare quando l'esecuzione conta davvero.",
-          es: "Andreas combina una sólida experiencia operativa con la capacidad de gestionar entornos de eventos complejos de manera fiable. Es alguien en quien puedes confiar cuando la ejecución realmente importa.",
+          en: "Andreas is one of those rare operators who understands both the system and the room. At elrow, operational complexity is part of the concept — and he handles it without making it anyone else's problem. I trust him on the ground.",
+          it: "Andreas è uno di quegli operatori rari che comprendono sia il sistema che l'ambiente. In elrow, la complessità operativa fa parte del concept — e lui la gestisce senza farne il problema di nessun altro. Mi fido di lui sul campo.",
+          es: "Andreas es uno de esos operadores excepcionales que entienden tanto el sistema como la sala. En elrow, la complejidad operativa es parte del concepto — y él la maneja sin convertirla en el problema de nadie más. Confío en él sobre el terreno.",
         },
-        name: "Pol Torà Mañós",
-        role: { en: "Head of Client Services, Howler", it: "Head of Client Services, Howler", es: "Head of Client Services, Howler" },
+        name: "Juan Arnau",
+        role: { en: "Founder, elrow", it: "Founder, elrow", es: "Founder, elrow" },
       },
       {
         quote: {
