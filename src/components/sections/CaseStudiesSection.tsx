@@ -3,18 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { useTranslation } from "@/i18n/useTranslation";
-
-import caseMonegros from "@/assets/monegros-new.jpg";
-import caseCampovolo from "@/assets/events/campovolo.webp";
-import caseKappaFutur from "@/assets/events/kappa-futur.webp";
-import caseElrow from "@/assets/case-elrow.jpg";
-import caseDimensions from "@/assets/case-dimensions.jpg";
-import caseMotogp from "@/assets/events/motogp.jpg";
-import caseOlimpico from "@/assets/events/olimpico.jpg";
-import caseSonar from "@/assets/sonar-new.png";
-
-const images = [caseCampovolo, caseKappaFutur, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
-const imageFits: (("cover" | "contain") | undefined)[] = [undefined, undefined, undefined, "contain", undefined, undefined, undefined];
+import { caseStudyImages, caseStudyImageFits } from "@/data/caseStudyImages";
 
 const CaseStudiesSection = () => {
   const { t, language, translations } = useTranslation();
@@ -40,9 +29,9 @@ const CaseStudiesSection = () => {
               details={study.details[language]}
               role={t(study.role)}
               outcome={t(study.outcome)}
-              image={images[index]}
+              image={caseStudyImages[index]}
               index={index}
-              imageFit={imageFits[index]}
+              imageFit={caseStudyImageFits[index]}
             />
           ))}
         </div>

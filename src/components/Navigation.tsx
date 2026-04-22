@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -20,6 +20,8 @@ const Navigation = () => {
   const { language, setLanguage } = useLanguage();
   const { t, translations } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
   const currentLang = lang || language;
 
@@ -35,28 +37,62 @@ const Navigation = () => {
 
   const switchLanguage = (newLang: Language) => {
     setLanguage(newLang);
-    // Replace the language prefix in the current path
     const pathWithoutLang = location.pathname.replace(/^\/(en|it|es)/, "");
     navigate(`/${newLang}${pathWithoutLang || ""}`);
   };
 
-  const isActive = (href: string) => {
-    return location.pathname === href;
-  };
+  const isActive = (href: string) => location.pathname === href;
+
+  // Focus trap + Escape key for mobile menu
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    const focusableSelectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const getFocusable = () => Array.from(menu.querySelectorAll<HTMLElement>(focusableSelectors));
+
+    // Move focus into menu on open
+    const focusables = getFocusable();
+    focusables[0]?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeMenu();
+        hamburgerRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const els = getFocusable();
+      const first = els[0];
+      const last = els[els.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 md:px-6 py-5">
         <div className="flex items-center justify-between">
-          <Link 
-            to={`/${currentLang}`} 
+          <Link
+            to={`/${currentLang}`}
             className="text-sm font-semibold uppercase tracking-[0.15em] text-foreground hover:text-muted-foreground transition-colors truncate max-w-[180px] lg:max-w-none"
             onClick={closeMenu}
           >
             <span className="hidden lg:inline">Andreas Colucci - Event Tech & Operations Consultant</span>
             <span className="lg:hidden">Andreas Colucci</span>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             <ul className="flex items-center gap-10">
@@ -115,9 +151,12 @@ const Navigation = () => {
               ))}
             </div>
             <button
+              ref={hamburgerRef}
               onClick={toggleMenu}
               className="p-2 text-foreground hover:text-muted-foreground transition-colors"
               aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -129,6 +168,8 @@ const Navigation = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={menuRef}
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -137,7 +178,7 @@ const Navigation = () => {
           >
             <ul className="container mx-auto px-4 py-8 space-y-6">
               {navItems.map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}

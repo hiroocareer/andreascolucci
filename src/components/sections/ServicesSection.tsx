@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
+import { Language } from "@/i18n/translations";
+
+type ServiceItemBase = {
+  title: Record<Language, string>;
+  closing: Record<Language, string>;
+};
+type ServiceItemWithDescription = ServiceItemBase & { description: Record<Language, string> };
+type ServiceItemWithList = ServiceItemBase & { items: Record<Language, readonly string[]> };
+type ServiceItem = ServiceItemWithDescription | ServiceItemWithList;
 
 const ServicesSection = () => {
   const { t, language, translations } = useTranslation();
@@ -17,15 +26,15 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-          {s.items.map((service, index) => (
+          {(s.items as ServiceItem[]).map((service, index) => (
             <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="border-t border-border pt-8 flex flex-col">
               <h3 className="text-xl md:text-2xl font-medium text-foreground mb-4 tracking-tight">{t(service.title)}</h3>
               {"description" in service && (
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">{t((service as any).description)}</p>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">{t((service as ServiceItemWithDescription).description)}</p>
               )}
               {"items" in service && (
                 <ul className="space-y-2 mb-6">
-                  {((service as any).items[language] as string[]).map((item: string) => (
+                  {(service as ServiceItemWithList).items[language].map((item) => (
                     <li key={item} className="text-base md:text-lg text-muted-foreground leading-relaxed flex items-start gap-2">
                       <span className="w-1 h-1 bg-foreground rounded-full mt-1.5 shrink-0" />
                       {item}
@@ -33,9 +42,7 @@ const ServicesSection = () => {
                   ))}
                 </ul>
               )}
-              {"closing" in service && (
-                <p className="text-base md:text-lg text-foreground font-semibold leading-relaxed mt-auto pt-4 border-t border-border/50">{t((service as any).closing)}</p>
-              )}
+              <p className="text-base md:text-lg text-foreground font-semibold leading-relaxed mt-auto pt-4 border-t border-border/50">{t(service.closing)}</p>
             </motion.div>
           ))}
         </div>

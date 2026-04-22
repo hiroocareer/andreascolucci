@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 
@@ -19,6 +19,15 @@ interface CaseStudyCardProps {
 const CaseStudyCard = ({ number, title, highlight, context, details, role, outcome, image, index, imageFit = "cover" }: CaseStudyCardProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const { t, translations } = useTranslation();
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxOpen]);
   const cs = translations.caseStudies;
   const isReversed = index % 2 !== 0;
   const fitClass = imageFit === "contain" ? "object-contain" : "object-cover";

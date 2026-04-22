@@ -2,26 +2,17 @@ import { motion } from "framer-motion";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { useTranslation } from "@/i18n/useTranslation";
 import { useSEO } from "@/hooks/useSEO";
-
-import caseCampovolo from "@/assets/events/campovolo.webp";
-import caseKappaFutur from "@/assets/events/kappa-futur.webp";
-import caseMonegros from "@/assets/monegros-new.jpg";
-import caseSonar from "@/assets/sonar-new.png";
-import caseElrow from "@/assets/case-elrow.jpg";
-import caseMotogp from "@/assets/events/motogp.jpg";
-import caseOlimpico from "@/assets/events/olimpico.jpg";
-
-const images = [caseCampovolo, caseKappaFutur, caseMonegros, caseSonar, caseElrow, caseMotogp, caseOlimpico];
-const imageFits: (("cover" | "contain") | undefined)[] = [undefined, undefined, undefined, "contain", undefined, undefined, undefined];
+import { caseStudyImages, caseStudyImageFits } from "@/data/caseStudyImages";
 
 const Work = () => {
-  useSEO();
+  const seo = useSEO();
   const { t, language, translations } = useTranslation();
   const w = translations.workPage;
   const cs = translations.caseStudies;
 
   return (
     <main className="min-h-screen bg-background pt-32 pb-20 px-4 md:px-6">
+      {seo}
       <div className="container mx-auto">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
           <h1 className="heading-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] mb-8">{t(w.title)}</h1>
@@ -39,9 +30,9 @@ const Work = () => {
               details={study.details[language]}
               role={t(study.role)}
               outcome={t(study.outcome)}
-              image={images[index]}
+              image={caseStudyImages[index]}
               index={index}
-              imageFit={imageFits[index]}
+              imageFit={caseStudyImageFits[index]}
             />
           ))}
         </div>

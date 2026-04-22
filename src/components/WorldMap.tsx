@@ -55,6 +55,8 @@ const WorldMap = memo(() => {
         className="w-full h-auto"
         style={{ maxHeight: "480px" }}
         viewBox="0 40 800 420"
+        role="img"
+        aria-label="World map highlighting countries where Andreas Colucci has worked: Italy, Spain, France, Portugal, Germany, Belgium, Switzerland, Croatia, Romania, Ireland, UK, USA, Panama, Guatemala, India, Thailand, China, South Africa, UAE, Netherlands, Andorra, Mexico, Morocco"
       >
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>

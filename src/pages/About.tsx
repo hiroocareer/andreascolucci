@@ -3,13 +3,14 @@ import { useTranslation } from "@/i18n/useTranslation";
 import { useSEO } from "@/hooks/useSEO";
 
 const About = () => {
-  useSEO();
+  const seo = useSEO();
   const { t, language, translations } = useTranslation();
   const a = translations.aboutPage;
   const principles = a.principles[language];
 
   return (
     <main className="min-h-screen bg-background pt-32 pb-20 px-4 md:px-6">
+      {seo}
       <div className="container mx-auto">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-20">
           <h1 className="heading-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.95] mb-8">{t(a.title)}</h1>

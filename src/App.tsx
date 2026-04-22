@@ -1,18 +1,21 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import { Language } from "@/i18n/translations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import Index from "./pages/Index";
-import Work from "./pages/Work";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+
+const Index = lazy(() => import("./pages/Index"));
+const Work = lazy(() => import("./pages/Work"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -41,25 +44,26 @@ const getDefaultLanguage = (): Language => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          {/* Redirect root to browser language */}
-          <Route path="/" element={<Navigate to={`/${getDefaultLanguage()}`} replace />} />
-          
-          {/* Language-prefixed routes */}
-          <Route path="/:lang" element={<LanguageWrapper><Index /></LanguageWrapper>} />
-          <Route path="/:lang/work" element={<LanguageWrapper><Work /></LanguageWrapper>} />
-          <Route path="/:lang/about" element={<LanguageWrapper><About /></LanguageWrapper>} />
-          <Route path="/:lang/contact" element={<LanguageWrapper><Contact /></LanguageWrapper>} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Navigate to={`/${getDefaultLanguage()}`} replace />} />
+              <Route path="/:lang" element={<LanguageWrapper><Index /></LanguageWrapper>} />
+              <Route path="/:lang/work" element={<LanguageWrapper><Work /></LanguageWrapper>} />
+              <Route path="/:lang/about" element={<LanguageWrapper><About /></LanguageWrapper>} />
+              <Route path="/:lang/contact" element={<LanguageWrapper><Contact /></LanguageWrapper>} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

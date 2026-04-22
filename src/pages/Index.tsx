@@ -14,9 +14,10 @@ import ContactSection from "@/components/sections/ContactSection";
 import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
-  useSEO();
+  const seo = useSEO();
   return (
     <main className="min-h-screen bg-background">
+      {seo}
       <HeroSection />
       <ImpactSection />
       <LogoStripSection />

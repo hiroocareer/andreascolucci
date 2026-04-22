@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
-import { useLanguage } from "@/i18n/LanguageContext";
+import { useTranslation } from "@/i18n/useTranslation";
 import { Language } from "@/i18n/translations";
 
 const DOMAIN = "https://andreascolucci.com";
@@ -73,58 +73,33 @@ const getPageKey = (pathname: string): string => {
 };
 
 export const useSEO = () => {
-  const { language } = useLanguage();
+  const { language } = useTranslation();
   const location = useLocation();
 
-  useEffect(() => {
-    const pageKey = getPageKey(location.pathname);
-    const meta = pageMeta[pageKey] || pageMeta.home;
+  const pageKey = getPageKey(location.pathname);
+  const meta = pageMeta[pageKey] || pageMeta.home;
 
-    const title = meta.title[language];
-    const description = meta.description[language];
-    const ogDescription = meta.ogDescription?.[language] || description;
+  const title = meta.title[language];
+  const description = meta.description[language];
+  const ogDescription = meta.ogDescription?.[language] || description;
+  const basePath = location.pathname.replace(/^\/(en|it|es)/, "");
+  const canonicalUrl = `${DOMAIN}${location.pathname}`;
 
-    // Document
-    document.title = title;
-    document.documentElement.lang = language;
-
-    // Meta description
-    const setMeta = (selector: string, attr: string, value: string) => {
-      const el = document.querySelector(selector);
-      if (el) el.setAttribute(attr, value);
-    };
-
-    setMeta('meta[name="description"]', "content", description);
-    setMeta('meta[property="og:title"]', "content", title);
-    setMeta('meta[property="og:description"]', "content", ogDescription);
-    setMeta('meta[property="og:url"]', "content", `${DOMAIN}${location.pathname}`);
-    setMeta('meta[name="twitter:title"]', "content", title);
-    setMeta('meta[name="twitter:description"]', "content", ogDescription);
-
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${DOMAIN}${location.pathname}`;
-
-    // Hreflang alternates
-    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
-    const basePath = location.pathname.replace(/^\/(en|it|es)/, "");
-    (["en", "it", "es"] as Language[]).forEach(lang => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = lang;
-      link.href = `${DOMAIN}/${lang}${basePath}`;
-      document.head.appendChild(link);
-    });
-    // x-default
-    const xDefault = document.createElement("link");
-    xDefault.rel = "alternate";
-    xDefault.hreflang = "x-default";
-    xDefault.href = `${DOMAIN}/en${basePath}`;
-    document.head.appendChild(xDefault);
-  }, [language, location.pathname]);
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <html lang={language} />
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={ogDescription} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={ogDescription} />
+      <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hreflang="en" href={`${DOMAIN}/en${basePath}`} />
+      <link rel="alternate" hreflang="it" href={`${DOMAIN}/it${basePath}`} />
+      <link rel="alternate" hreflang="es" href={`${DOMAIN}/es${basePath}`} />
+      <link rel="alternate" hreflang="x-default" href={`${DOMAIN}/en${basePath}`} />
+    </Helmet>
+  );
 };

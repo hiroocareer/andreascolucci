@@ -32,7 +32,7 @@ const LogoStripSection = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="py-28 md:py-36 px-4 md:px-6 border-t border-border overflow-hidden">
+    <section className="py-28 md:py-36 px-4 md:px-6 border-t border-border overflow-hidden" aria-label="Companies Andreas has worked with">
       <div className="container mx-auto mb-16 md:mb-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
           <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">

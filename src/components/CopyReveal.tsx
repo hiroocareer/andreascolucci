@@ -10,18 +10,27 @@ interface CopyRevealProps {
 
 const CopyReveal = ({ before, after, className }: CopyRevealProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const isActive = isHovered || isFocused;
 
   return (
     <div
-      className={cn(
-        "relative cursor-pointer select-none",
-        className
-      )}
+      role="button"
+      tabIndex={0}
+      className={cn("relative cursor-pointer select-none", className)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setIsFocused((prev) => !prev);
+        }
+      }}
     >
       <AnimatePresence mode="wait">
-        {!isHovered ? (
+        {!isActive ? (
           <motion.div
             key="before"
             initial={{ opacity: 0, y: 10 }}
@@ -34,7 +43,8 @@ const CopyReveal = ({ before, after, className }: CopyRevealProps) => {
               {before}
             </span>
             <span className="text-xs uppercase tracking-wider text-muted-foreground/50">
-              hover
+              <span className="hidden [@media(hover:hover)]:inline">hover</span>
+              <span className="[@media(hover:hover)]:hidden">tap</span>
             </span>
           </motion.div>
         ) : (
