@@ -44,7 +44,7 @@ Deno.serve(async (req) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'onboarding@resend.dev',
+      from: 'hello@andreascolucci.com',
       to: ['hello@andreascolucci.com'],
       reply_to: email,
       subject: `New message from ${name}`,
@@ -55,7 +55,7 @@ Deno.serve(async (req) => {
   if (!res.ok) {
     const errText = await res.text()
     console.error('Resend error:', errText)
-    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+    return new Response(JSON.stringify({ error: 'Failed to send email', detail: errText }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
